@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Entities | PlaShiki Documentation</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    
+    <meta name="description" content="">
+    <link rel="preload" href="/assets/css/0.styles.81630486.css" as="style"><link rel="preload" href="/assets/js/app.ca4d2e0d.js" as="script"><link rel="preload" href="/assets/js/2.0e07b844.js" as="script"><link rel="preload" href="/assets/js/11.03f0caff.js" as="script"><link rel="preload" href="/assets/js/4.55073f4c.js" as="script"><link rel="prefetch" href="/assets/js/10.7340fc84.js"><link rel="prefetch" href="/assets/js/3.8a841bdf.js"><link rel="prefetch" href="/assets/js/5.1c0b950b.js"><link rel="prefetch" href="/assets/js/6.efe1cf05.js"><link rel="prefetch" href="/assets/js/7.9263b0f8.js"><link rel="prefetch" href="/assets/js/8.c45afeec.js"><link rel="prefetch" href="/assets/js/9.c788bd65.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.81630486.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">PlaShiki Documentation</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"> <a href="https://github.com/plashiki/backend" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"> <a href="https://github.com/plashiki/backend" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/" aria-current="page" class="sidebar-link">Starting point</a></li><li><a href="/endpoints/" class="sidebar-link">Endpoints</a></li><li><a href="/entities/" aria-current="page" class="active sidebar-link">Entities</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/entities/#entity-user" class="sidebar-link">User</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-oauthapp" class="sidebar-link">OauthApp</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-oauthsession" class="sidebar-link">OauthSession</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-notification" class="sidebar-link">Notification</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-firebasetoken" class="sidebar-link">FirebaseToken</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-statisticsday" class="sidebar-link">StatisticsDay</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-translation" class="sidebar-link">Translation</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-parser" class="sidebar-link">Parser</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-mapping" class="sidebar-link">Mapping</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-mediapart" class="sidebar-link">MediaPart</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-report" class="sidebar-link">Report</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-userrate" class="sidebar-link">UserRate</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-performapicalloptions" class="sidebar-link">PerformApiCallOptions</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-translationauthor" class="sidebar-link">TranslationAuthor</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-paginated" class="sidebar-link">Paginated</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-paginatedsorted" class="sidebar-link">PaginatedSorted</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-createapplicationbody" class="sidebar-link">CreateApplicationBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-patchapplicationbody" class="sidebar-link">PatchApplicationBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-shikimoriloginbody" class="sidebar-link">ShikimoriLoginBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-shikimoriproxybody" class="sidebar-link">ShikimoriProxyBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-runcleanerbody" class="sidebar-link">RunCleanerBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-gettranslationsparameters" class="sidebar-link">GetTranslationsParameters</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-submittranslationbody" class="sidebar-link">SubmitTranslationBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-submitreportbody" class="sidebar-link">SubmitReportBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-captcharefreshbody" class="sidebar-link">CaptchaRefreshBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-externalbatchadditionitem" class="sidebar-link">ExternalBatchAdditionItem</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-externalbatchadditionbody" class="sidebar-link">ExternalBatchAdditionBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-batchpatchtranslationbody" class="sidebar-link">BatchPatchTranslationBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-parserspullbody" class="sidebar-link">ParsersPullBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-parserspushbody" class="sidebar-link">ParsersPushBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-gettranslationsparameterscompat" class="sidebar-link">GetTranslationsParametersCompat</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-getuserparams" class="sidebar-link">GetUserParams</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-patchuserbody" class="sidebar-link">PatchUserBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-getuserratesparams" class="sidebar-link">GetUserRatesParams</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-user" class="sidebar-link">User</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-oauthapp" class="sidebar-link">OauthApp</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-oauthsession" class="sidebar-link">OauthSession</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-notification" class="sidebar-link">Notification</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-firebasetoken" class="sidebar-link">FirebaseToken</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-statisticsday" class="sidebar-link">StatisticsDay</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-translation" class="sidebar-link">Translation</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-parser" class="sidebar-link">Parser</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-mapping" class="sidebar-link">Mapping</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-mediapart" class="sidebar-link">MediaPart</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-report" class="sidebar-link">Report</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-userrate" class="sidebar-link">UserRate</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-performapicalloptions" class="sidebar-link">PerformApiCallOptions</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-translationauthor" class="sidebar-link">TranslationAuthor</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-paginated" class="sidebar-link">Paginated</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-paginatedsorted" class="sidebar-link">PaginatedSorted</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-createapplicationbody" class="sidebar-link">CreateApplicationBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-patchapplicationbody" class="sidebar-link">PatchApplicationBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-shikimoriloginbody" class="sidebar-link">ShikimoriLoginBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-shikimoriproxybody" class="sidebar-link">ShikimoriProxyBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-runcleanerbody" class="sidebar-link">RunCleanerBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-gettranslationsparameters" class="sidebar-link">GetTranslationsParameters</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-submittranslationbody" class="sidebar-link">SubmitTranslationBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-submitreportbody" class="sidebar-link">SubmitReportBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-captcharefreshbody" class="sidebar-link">CaptchaRefreshBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-externalbatchadditionitem" class="sidebar-link">ExternalBatchAdditionItem</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-externalbatchadditionbody" class="sidebar-link">ExternalBatchAdditionBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-batchpatchtranslationbody" class="sidebar-link">BatchPatchTranslationBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-parserspullbody" class="sidebar-link">ParsersPullBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-parserspushbody" class="sidebar-link">ParsersPushBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-gettranslationsparameterscompat" class="sidebar-link">GetTranslationsParametersCompat</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-getuserparams" class="sidebar-link">GetUserParams</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-patchuserbody" class="sidebar-link">PatchUserBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-getuserratesparams" class="sidebar-link">GetUserRatesParams</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-user" class="sidebar-link">User</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-oauthapp" class="sidebar-link">OauthApp</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-oauthsession" class="sidebar-link">OauthSession</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-notification" class="sidebar-link">Notification</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-firebasetoken" class="sidebar-link">FirebaseToken</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-statisticsday" class="sidebar-link">StatisticsDay</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-translation" class="sidebar-link">Translation</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-parser" class="sidebar-link">Parser</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-mapping" class="sidebar-link">Mapping</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-mediapart" class="sidebar-link">MediaPart</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-report" class="sidebar-link">Report</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-userrate" class="sidebar-link">UserRate</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-performapicalloptions" class="sidebar-link">PerformApiCallOptions</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-translationauthor" class="sidebar-link">TranslationAuthor</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-paginated" class="sidebar-link">Paginated</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-paginatedsorted" class="sidebar-link">PaginatedSorted</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-createapplicationbody" class="sidebar-link">CreateApplicationBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-patchapplicationbody" class="sidebar-link">PatchApplicationBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-shikimoriloginbody" class="sidebar-link">ShikimoriLoginBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-shikimoriproxybody" class="sidebar-link">ShikimoriProxyBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-runcleanerbody" class="sidebar-link">RunCleanerBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-gettranslationsparameters" class="sidebar-link">GetTranslationsParameters</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-submittranslationbody" class="sidebar-link">SubmitTranslationBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-submitreportbody" class="sidebar-link">SubmitReportBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-captcharefreshbody" class="sidebar-link">CaptchaRefreshBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-externalbatchadditionitem" class="sidebar-link">ExternalBatchAdditionItem</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-externalbatchadditionbody" class="sidebar-link">ExternalBatchAdditionBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-batchpatchtranslationbody" class="sidebar-link">BatchPatchTranslationBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-parserspullbody" class="sidebar-link">ParsersPullBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-parserspushbody" class="sidebar-link">ParsersPushBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-gettranslationsparameterscompat" class="sidebar-link">GetTranslationsParametersCompat</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-getuserparams" class="sidebar-link">GetUserParams</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-patchuserbody" class="sidebar-link">PatchUserBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-getuserratesparams" class="sidebar-link">GetUserRatesParams</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-user" class="sidebar-link">User</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-oauthapp" class="sidebar-link">OauthApp</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-oauthsession" class="sidebar-link">OauthSession</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-notification" class="sidebar-link">Notification</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-firebasetoken" class="sidebar-link">FirebaseToken</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-statisticsday" class="sidebar-link">StatisticsDay</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-translation" class="sidebar-link">Translation</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-parser" class="sidebar-link">Parser</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-mapping" class="sidebar-link">Mapping</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-mediapart" class="sidebar-link">MediaPart</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-report" class="sidebar-link">Report</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-userrate" class="sidebar-link">UserRate</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-performapicalloptions" class="sidebar-link">PerformApiCallOptions</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-translationauthor" class="sidebar-link">TranslationAuthor</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-paginated" class="sidebar-link">Paginated</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-paginatedsorted" class="sidebar-link">PaginatedSorted</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-createapplicationbody" class="sidebar-link">CreateApplicationBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-patchapplicationbody" class="sidebar-link">PatchApplicationBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-shikimoriloginbody" class="sidebar-link">ShikimoriLoginBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-shikimoriproxybody" class="sidebar-link">ShikimoriProxyBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-runcleanerbody" class="sidebar-link">RunCleanerBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-gettranslationsparameters" class="sidebar-link">GetTranslationsParameters</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-submittranslationbody" class="sidebar-link">SubmitTranslationBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-submitreportbody" class="sidebar-link">SubmitReportBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-captcharefreshbody" class="sidebar-link">CaptchaRefreshBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-externalbatchadditionitem" class="sidebar-link">ExternalBatchAdditionItem</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-externalbatchadditionbody" class="sidebar-link">ExternalBatchAdditionBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-batchpatchtranslationbody" class="sidebar-link">BatchPatchTranslationBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-parserspullbody" class="sidebar-link">ParsersPullBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-parserspushbody" class="sidebar-link">ParsersPushBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-gettranslationsparameterscompat" class="sidebar-link">GetTranslationsParametersCompat</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-getuserparams" class="sidebar-link">GetUserParams</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-patchuserbody" class="sidebar-link">PatchUserBody</a></li><li class="sidebar-sub-header"><a href="/entities/#entity-getuserratesparams" class="sidebar-link">GetUserRatesParams</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="entities"><a href="#entities" class="header-anchor">#</a> Entities</h1> <div class="entity"><h2 id="entity-user"><a href="#entity-user" class="header-anchor">#</a>
+        User
+    </h2> <p></p> <h4>Fields</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr><td>id</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>nickname</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>avatar</td> <td><span><span><!----> <span>
+            string
+        </span></span><span><span>⁠|​⁠</span> <span>
+            null
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>Valid URL</li></ul></div></td></tr><tr><td>admin</td> <td><span><span><!----> <span>
+            boolean
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>moderator</td> <td><span><span><!----> <span>
+            boolean
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>trusted</td> <td><span><span><!----> <span>
+            boolean
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>banned</td> <td><span><span><!----> <span>
+            boolean
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>donated</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>external_ids</td> <td><span><span><!----> <span>
+            object
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>service</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>One of: <code>S</code></li></ul></div></td></tr><tr><td>sub</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>language</td> <td><span><span><!----> <span>
+            string
+        </span></span><span><span>⁠|​⁠</span> <span>
+            null
+        </span></span></span></td> <td><span></span> <!----></td></tr></tbody></table></div><div class="entity"><h2 id="entity-oauthapp"><a href="#entity-oauthapp" class="header-anchor">#</a>
+        OauthApp
+    </h2> <p></p> <h4>Fields</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr><td>id</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>client_id</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>client_secret</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>owner_id</td> <td><span><span><!----> <span>
+            number
+        </span></span><span><span>⁠|​⁠</span> <span>
+            null
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>name</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>icon</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>description</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>redirect_uri</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>server_scope</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>owner</td> <td><span></span></td> <td><span></span> <!----></td></tr></tbody></table></div><div class="entity"><h2 id="entity-oauthsession"><a href="#entity-oauthsession" class="header-anchor">#</a>
+        OauthSession
+    </h2> <p></p> <h4>Fields</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr><td>token</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>app_id</td> <td><span><span><!----> <span>
+            number
+        </span></span><span><span>⁠|​⁠</span> <span>
+            null
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>user_id</td> <td><span><span><!----> <span>
+            number
+        </span></span><span><span>⁠|​⁠</span> <span>
+            null
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>captcha</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>app</td> <td><span></span></td> <td><span></span> <!----></td></tr><tr><td>user</td> <td><span></span></td> <td><span></span> <!----></td></tr></tbody></table></div><div class="entity"><h2 id="entity-notification"><a href="#entity-notification" class="header-anchor">#</a>
+        Notification
+    </h2> <p></p> <h4>Fields</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr><td>id</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>tag</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>progress</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>for_users</td> <td><span><span><!----> <span>
+            number
+        </span></span><span><span>⁠|​⁠</span> <span>
+            null
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>users_seen</td> <td><span><span><!----> <span>
+            number
+        </span></span><span><span>⁠|​⁠</span> <span>
+            null
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>deleted</td> <td><span><span><!----> <span>
+            boolean
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>topics</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>payload</td> <td><span><span><!----> <span>
+            object
+        </span></span><span><span>⁠|​⁠</span> <span>
+            null
+        </span></span></span></td> <td><span></span> <!----></td></tr></tbody></table></div><div class="entity"><h2 id="entity-firebasetoken"><a href="#entity-firebasetoken" class="header-anchor">#</a>
+        FirebaseToken
+    </h2> <p></p> <h4>Fields</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr><td>token</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>user_id</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>user</td> <td><span></span></td> <td><span></span> <!----></td></tr></tbody></table></div><div class="entity"><h2 id="entity-statisticsday"><a href="#entity-statisticsday" class="header-anchor">#</a>
+        StatisticsDay
+    </h2> <p></p> <h4>Fields</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr><td>day</td> <td><span><span><!----> 
+            <a href="/entities/#entity-date">Date</a>
+        </span></span></td> <td><span></span> <!----></td></tr><tr><td>data</td> <td><span><span><!----> <span>
+            object
+        </span></span></span></td> <td><span></span> <!----></td></tr></tbody></table></div><div class="entity"><h2 id="entity-translation"><a href="#entity-translation" class="header-anchor">#</a>
+        Translation
+    </h2> <p>A single translation/submission (technically they are the same)</p> <h4>Fields</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr><td>id</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span>Unique translation/submission ID.</span> <!----></td></tr><tr><td>target_id</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span>Target media ID of the translation. Currently uses MAL IDs.</span> <!----></td></tr><tr><td>target_type</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>Target media type of the translation. Currently uses <code>anime, manga</code> like MAL.</span> <!----></td></tr><tr><td>part</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span>Part number of the translation. Specifically, episode for anime and chapter for manga.</span> <!----></td></tr><tr><td>kind</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>Translation kind. Anime translation can be <code>sub</code>bed and <code>dub</code>bed, manga translations can be <code>scan</code>lations and <code>off</code>ficial, and both can be <code>raw</code></span> <!----></td></tr><tr><td>lang</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>Translation language. Currently support <code>en, ru, by, ua, jp, fr, de, cn, ko</code> and <code>other</code>, but list may expand at some time.</span> <!----></td></tr><tr><td>author</td> <td><span></span></td> <td><span>Translation author</span> <!----></td></tr><tr><td>uploader_id</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span>ID of user that added this translation. <code>null</code> if added by Parser or External batch addition</span> <!----></td></tr><tr><td>status</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>Translation status. Differentiates submissions and actual translations. Only available in Moderation or Submission APIs.</span> <!----></td></tr><tr><td>url</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>URL to translation iframe. Is a <code>https://</code> link (or <code>http://</code> for external translations). If <code>?external=proto</code>, then may be a <code>ehttp://</code> or <code>ehttps://</code> link, which means this translation is external and can't be displayed in a iframe. Remove preceding e to get actual link.</span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>Valid URL, protocol is one of: <code>https</code></li></ul></div></td></tr><tr><td>groups</td> <td><span></span></td> <td><span>Translation grouping. Used to do batch operations with ease. Mainly used for Parsers like <code>parser:[parser-uid]</code> and External batch addition like <code>from-app:[app-id]</code>Only visible to moderators.</span> <!----></td></tr><tr><td>created_at</td> <td><span><span><!----> 
+            <a href="/entities/#entity-date">Date</a>
+        </span></span></td> <td><span>Translation creation time</span> <!----></td></tr><tr><td>updated_at</td> <td><span><span><!----> 
+            <a href="/entities/#entity-date">Date</a>
+        </span></span></td> <td><span>Translation last update time</span> <!----></td></tr><tr><td>uploader</td> <td><span><span><!----> <span>
+            object
+        </span></span></span></td> <td><span>Information about user that added this translation. Only present with <code>?needUploader</code> param, only <code>id, nickname, avatar</code> fields are present.</span> <!----></td></tr></tbody></table></div><div class="entity"><h2 id="entity-parser"><a href="#entity-parser" class="header-anchor">#</a>
+        Parser
+    </h2> <p>Parser is a piece of JS code + meta information for some actions, whose method of handling may change at all times. We use them to store (currently) 3 types of parsers -- Importers, Cleaners and Mappers. <br><br><b>Importers</b> are scripts that run every so often (on a schedule) and which task is to grab some translations from some services and import them all to our DB. They should contain a <code>function(){...}</code> expression, where the returned function should return an async iterable (or compatible) of <code>Translation</code><br><br><b>Cleaners</b> are scripts that remove old and banned players from database. They should contain a<code>function(){}</code> expression, where the returned function should return an async iterable (or compatible) of integers, ids of translations to be removed. In params, they have access to TypeORM Translation entity (<code>ctx.params.Translation</code>)<br><br><b>Mappers</b> are scripts that grab external websites' media ids and try to map them with MAL ids, which are used by PlaShiki. They should contain a <code>function(){...}</code> expression, where the returned function should return <code>ExternalServiceMappings</code> or <code>Promise&lt;ExternalServiceMappings&gt;</code><br><br>All of them receive a <code>ParserContext</code> object as an argument, which is described in types/ctx.ts at <a href="//github.com/plashiki/plashiki-parsers">plashiki-parsers</a> repository.</p> <h4>Fields</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr><td>uid</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>Uid of a parser. Is globally unique. Importers' uid start with <code>importers/</code>, Cleaners' uid start with <code>cleaners/</code> and Mappers' uid start with <code>mappers/</code>. </span> <!----></td></tr><tr><td>provide</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>Dependencies of a parser. A parser can contain some dependencies, for example to abstract parsing logic of a single platform but keep different parsers for different authors. Nested dependencies are supported, circular are not</span> <!----></td></tr><tr><td>storage</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>List of used storage keys by a parser. This list may not be exhaustive, and is only used for parser dashboard. This DOES NOT affect parser's runtime permissions or whatever. May include SQL patterns, for example <code>name:%</code></span> <!----></td></tr><tr><td>disabled</td> <td><span><span><!----> <span>
+            boolean
+        </span></span></span></td> <td><span>When a parser is disabled, it will not be started on schedule (in case of an Importer/Mapper) This WILL NOT disable importing it as a dependency.</span> <!----></td></tr><tr><td>public</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>When a parser is public, anyone can run it. Possible values: <code>''</code> (empty string) = non-public<code>true</code> = public<code>N,M</code> = public with rate-limit: N requests every M seconds</span> <!----></td></tr><tr><td>cri</td> <td><span><span><!----> <span>
+            boolean
+        </span></span></span></td> <td><span>Constantly running importer. If true then this importer will be running all the time while server is up in a worker thread. (however it wont be restarted after worker is dead, i.e. function returns). Only applicable to Importers.</span> <!----></td></tr><tr><td>code</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>JavaScript code</span> <!----></td></tr><tr><td>source</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>Original source code of a file. GZipped. Used only for pulling.</span> <!----></td></tr><tr><td>hash</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>MD5 hash of a parser. Calculated as follows: <br><code>md5(p.uid + '\n\n' + p.provide.sort().join(',') + '\n\n' + p.code)</code>. <br>Used to keep track of changed parsers when pushing/pulling them</span> <!----></td></tr></tbody></table></div><div class="entity"><h2 id="entity-mapping"><a href="#entity-mapping" class="header-anchor">#</a>
+        Mapping
+    </h2> <p>A single media ID mapping. Daily dumps (gzipped JSON) are available at <a href="https://plashiki.su/static/mappings.json.gz">https://plashiki.su/static/mappings.json.gz</a></p> <h4>Fields</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr><td>id</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span>Unique mapping ID</span> <!----></td></tr><tr><td>type</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>Target media type</span> <!----></td></tr><tr><td>external</td> <td><span><span><!----> <span>
+            object
+        </span></span></span></td> <td><span>Actual ID mappings. List of <code>ExternalService</code>s can be found in <code>src/types/media.ts</code> file of backend</span> <!----></td></tr></tbody></table></div><div class="entity"><h2 id="entity-mediapart"><a href="#entity-mediapart" class="header-anchor">#</a>
+        MediaPart
+    </h2> <p>A single media part's information</p> <h4>Fields</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr><td>id</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span>Unique part ID</span> <!----></td></tr><tr><td>media_type</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>Target media type</span> <!----></td></tr><tr><td>media_id</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span>Target media ID (MAL)</span> <!----></td></tr><tr><td>number</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span>Part number (starting from 1)</span> <!----></td></tr><tr><td>title</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>Part title</span> <!----></td></tr></tbody></table></div><div class="entity"><h2 id="entity-report"><a href="#entity-report" class="header-anchor">#</a>
+        Report
+    </h2> <p>A single report.</p> <h4>Fields</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr><td>id</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span>Unique report ID</span> <!----></td></tr><tr><td>is_complex</td> <td><span><span><!----> <span>
+            boolean
+        </span></span></span></td> <td><span>Whether this report is complex, meaning it affects more than one translation.</span> <!----></td></tr><tr><td>translation_id</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span>Report target ID. For <code>is_complex=true</code>, contains ID of a media (currently supports only anime). For <code>is_complex=false</code>, contains ID of a translation.</span> <!----></td></tr><tr><td>type</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>Report type</span> <!----></td></tr><tr><td>comment</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>Report comment. Value <code>AUTO_REPORT_DESCRIPTION</code> means that report was created automatically in response to user trying to add duplicate translation with different meta</span> <!----></td></tr><tr><td>sender_id</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span>Report sender ID</span> <!----></td></tr><tr><td>closed_by_id</td> <td><span><span><!----> <span>
+            object
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>status</td> <td><span><span><!----> <span>
+            enum
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>edit</td> <td><span><span><!----> <span>
+            object
+        </span></span><span><span>⁠|​⁠</span> <span>
+            null
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>sender</td> <td><span></span></td> <td><span>Report sender object. Only available in Moderation API -> Get single report</span> <!----></td></tr><tr><td>closed_by</td> <td><span></span></td> <td><span>User who closed the report. Only available for closed reports, for others is null.</span> <!----></td></tr></tbody></table></div><div class="entity"><h2 id="entity-userrate"><a href="#entity-userrate" class="header-anchor">#</a>
+        UserRate
+    </h2> <p></p> <h4>Fields</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr><td>id</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>target_id</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>target_type</td> <td><span><span><!----> <span>
+            object
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>One of: <code>anime, manga</code></li></ul></div></td></tr><tr><td>score</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>status</td> <td><span><span><!----> <span>
+            object
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>One of: <code>planned, in_progress, completed, on_hold, dropped</code></li></ul></div></td></tr><tr><td>parts</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>partsVolumes</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>repeats</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>user_id</td> <td><span><span><!----> <span>
+            object
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>ctx</td> <td><span><span><!----> <span>
+            object
+        </span></span></span></td> <td><span></span> <!----></td></tr></tbody></table></div><div class="entity"><h2 id="entity-performapicalloptions"><a href="#entity-performapicalloptions" class="header-anchor">#</a>
+        PerformApiCallOptions
+    </h2> <p></p> <h4>Fields</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr><td>path</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>method</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>One of: <code>GET, POST, PUT, PATCH, DELETE</code></li></ul></div></td></tr><tr><td>body</td> <td><span><span><!----> <span>
+            object
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>is an object or array</li></ul></div></td></tr><tr><td>query</td> <td><span><span><!----> <span>
+            object
+        </span></span></span></td> <td><span></span> <!----></td></tr></tbody></table></div><div class="entity"><h2 id="entity-translationauthor"><a href="#entity-translationauthor" class="header-anchor">#</a>
+        TranslationAuthor
+    </h2> <p></p> <h4>Fields</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr><td>group</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>Translators group (like AniDUB, HorribleSubs or Wakanim)</span> <!----></td></tr><tr><td>people</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>People who translated/voiced</span> <!----></td></tr><tr><td>ripper</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>(Optional) Name of rip author (like FortunaTV)</span> <!----></td></tr></tbody></table></div><div class="entity"><h2 id="entity-paginated"><a href="#entity-paginated" class="header-anchor">#</a>
+        Paginated
+    </h2> <p></p> <h4>Fields</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr><td>limit</td> <td><span><span><!----> <span>
+            number
+        </span></span><span><span>⁠|​⁠</span> <span>
+            string
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>Numeric integer  in range <b>[0; ∞]</b></li></ul></div></td></tr><tr><td>offset</td> <td><span><span><!----> <span>
+            number
+        </span></span><span><span>⁠|​⁠</span> <span>
+            string
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>Numeric integer  in range <b>[0; ∞]</b></li></ul></div></td></tr></tbody></table></div><div class="entity"><h2 id="entity-paginatedsorted"><a href="#entity-paginatedsorted" class="header-anchor">#</a>
+        PaginatedSorted
+    </h2> <p></p> <h4>Fields</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr><td>limit</td> <td><span><span><!----> <span>
+            number
+        </span></span><span><span>⁠|​⁠</span> <span>
+            string
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>Numeric integer  in range <b>[0; ∞]</b></li></ul></div></td></tr><tr><td>offset</td> <td><span><span><!----> <span>
+            number
+        </span></span><span><span>⁠|​⁠</span> <span>
+            string
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>Numeric integer  in range <b>[0; ∞]</b></li></ul></div></td></tr><tr><td>sort</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span></span> <!----></td></tr></tbody></table></div><div class="entity"><h2 id="entity-createapplicationbody"><a href="#entity-createapplicationbody" class="header-anchor">#</a>
+        CreateApplicationBody
+    </h2> <p></p> <h4>Fields</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr><td>name</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>description</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>Maximum length: 1000</li></ul></div></td></tr><tr><td>icon</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>Valid URL</li></ul></div></td></tr><tr><td>redirect_uri</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>Valid URL</li></ul></div></td></tr></tbody></table></div><div class="entity"><h2 id="entity-patchapplicationbody"><a href="#entity-patchapplicationbody" class="header-anchor">#</a>
+        PatchApplicationBody
+    </h2> <p></p> <h4>Fields</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr><td>name</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>description</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>Maximum length: 1000</li></ul></div></td></tr><tr><td>icon</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>Valid URL</li></ul></div></td></tr><tr><td>redirect_uri</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>Valid URL</li></ul></div></td></tr><tr><td>server_scope</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span></span> <!----></td></tr></tbody></table></div><div class="entity"><h2 id="entity-shikimoriloginbody"><a href="#entity-shikimoriloginbody" class="header-anchor">#</a>
+        ShikimoriLoginBody
+    </h2> <p></p> <h4>Fields</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr><td>code</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>nickname</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span></span> <!----></td></tr></tbody></table></div><div class="entity"><h2 id="entity-shikimoriproxybody"><a href="#entity-shikimoriproxybody" class="header-anchor">#</a>
+        ShikimoriProxyBody
+    </h2> <p></p> <h4>Fields</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr><td>endpoint</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>httpMethod</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>params</td> <td><span><span><!----> <span>
+            object
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>Is an object</li></ul></div></td></tr><tr><td>query</td> <td><span><span><!----> <span>
+            object
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>Is an object</li></ul></div></td></tr><tr><td>body</td> <td><span><span><!----> <span>
+            object
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>Is an object</li></ul></div></td></tr><tr><td>api</td> <td><span><span><!----> <span>
+            boolean
+        </span></span></span></td> <td><span></span> <!----></td></tr></tbody></table></div><div class="entity"><h2 id="entity-runcleanerbody"><a href="#entity-runcleanerbody" class="header-anchor">#</a>
+        RunCleanerBody
+    </h2> <p></p> <h4>Fields</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr><td>provide</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>code</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span></span> <!----></td></tr></tbody></table></div><div class="entity"><h2 id="entity-gettranslationsparameters"><a href="#entity-gettranslationsparameters" class="header-anchor">#</a>
+        GetTranslationsParameters
+    </h2> <p></p> <h4>Fields</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr><td>kind</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>Kind of translations to be returned.</span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>One of: <code>sub, dub, scan, off, raw</code></li></ul></div></td></tr><tr><td>lang</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>Language of translations to be returned.</span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>One of: <code>en, ru, by, ua, jp, fr, de, cn, ko, other</code></li></ul></div></td></tr><tr><td>hq</td> <td><span><span><!----> <span>
+            boolean
+        </span></span></span></td> <td><span>If true then only HQ translations will be returned</span> <!----></td></tr><tr><td>raw</td> <td><span><span><!----> <span>
+            boolean
+        </span></span></span></td> <td><span>If passed then items will not be sorted and classified, and returned as a raw array of objects</span> <!----></td></tr><tr><td>external</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>How to handle translations with external (non-embeddable) players. By default it will just return a link to it. <br/>If <code>?external=page</code>, then will return a special page that will ask user to open it in a new page<br/>If <code>?external=proto</code>, then external players will have a protocol <code>ehttp:// or ehttps://</code>, so you can handle them manually</span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>One of: <code>page, proto</code></li></ul></div></td></tr><tr><td>needUploader</td> <td><span><span><!----> <span>
+            boolean
+        </span></span></span></td> <td><span>If passed, all translation object will contain a <code>uploader</code> field. However, only <code>id, nickname, avatar</code> fields will be available.</span> <!----></td></tr><tr><td>fullAuthor</td> <td><span><span><!----> <span>
+            boolean
+        </span></span></span></td> <td><span>If passed, <code>author</code> will contain a <code>TranslationAuthor</code> object (only relevant when <code>?raw</code> is passed)</span> <!----></td></tr></tbody></table></div><div class="entity"><h2 id="entity-submittranslationbody"><a href="#entity-submittranslationbody" class="header-anchor">#</a>
+        SubmitTranslationBody
+    </h2> <p></p> <h4>Fields</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr><td>target_id</td> <td><span><span><!----> <span>
+            number
+        </span></span><span><span>⁠|​⁠</span> <span>
+            string
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>Numeric integer </li></ul></div></td></tr><tr><td>target_type</td> <td><span><span><!----> <span>
+            object
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>One of: <code>anime, manga</code></li></ul></div></td></tr><tr><td>part</td> <td><span><span><!----> <span>
+            number
+        </span></span><span><span>⁠|​⁠</span> <span>
+            string
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>Numeric integer  in range <b>[1; ∞]</b></li></ul></div></td></tr><tr><td>kind</td> <td><span><span><!----> <span>
+            object
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>One of: <code>sub, dub, scan, off, raw</code></li></ul></div></td></tr><tr><td>lang</td> <td><span><span><!----> <span>
+            object
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>One of: <code>en, ru, by, ua, jp, fr, de, cn, ko, other</code></li></ul></div></td></tr><tr><td>author</td> <td><span><span><!----> 
+            <a href="/entities/#entity-translationauthor">TranslationAuthor</a>
+        </span></span></td> <td><span></span> <!----></td></tr><tr><td>url</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>Valid URL, protocol is one of: <code>https</code></li></ul></div></td></tr></tbody></table></div><div class="entity"><h2 id="entity-submitreportbody"><a href="#entity-submitreportbody" class="header-anchor">#</a>
+        SubmitReportBody
+    </h2> <p></p> <h4>Fields</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr><td>is_complex</td> <td><span><span><!----> <span>
+            boolean
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>translation_id</td> <td><span><span><!----> <span>
+            number
+        </span></span><span><span>⁠|​⁠</span> <span>
+            string
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>Numeric integer </li></ul></div></td></tr><tr><td>type</td> <td><span><span><!----> <span>
+            object
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>One of: <code>invalid_media, invalid_part, invalid_meta, broken_link, legal_issue, other</code></li></ul></div></td></tr><tr><td>comment</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>Maximum length: 1000</li></ul></div></td></tr><tr><td>edit</td> <td><span><span><!----> 
+            <a href="/entities/#entity-submittranslationbody">SubmitTranslationBody</a>
+        </span></span></td> <td><span></span> <!----></td></tr></tbody></table></div><div class="entity"><h2 id="entity-captcharefreshbody"><a href="#entity-captcharefreshbody" class="header-anchor">#</a>
+        CaptchaRefreshBody
+    </h2> <p></p> <h4>Fields</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr><td>token</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span></span> <!----></td></tr></tbody></table></div><div class="entity"><h2 id="entity-externalbatchadditionitem"><a href="#entity-externalbatchadditionitem" class="header-anchor">#</a>
+        ExternalBatchAdditionItem
+    </h2> <p></p> <h4>Fields</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr><td>groups</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>status</td> <td><span><span><!----> <span>
+            object
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>One of: <code>pending, added, declined, mapping</code></li></ul></div></td></tr><tr><td>url</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>Valid URL, protocol is one of: <code>https, ehttp, ehttps</code></li></ul></div></td></tr></tbody></table></div><div class="entity"><h2 id="entity-externalbatchadditionbody"><a href="#entity-externalbatchadditionbody" class="header-anchor">#</a>
+        ExternalBatchAdditionBody
+    </h2> <p></p> <h4>Fields</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr><td>translations</td> <td><span><span><!----> 
+            <a href="/entities/#entity-externalbatchadditionitem">ExternalBatchAdditionItem</a>[]
+        </span></span></td> <td><span></span> <!----></td></tr></tbody></table></div><div class="entity"><h2 id="entity-batchpatchtranslationbody"><a href="#entity-batchpatchtranslationbody" class="header-anchor">#</a>
+        BatchPatchTranslationBody
+    </h2> <p></p> <h4>Fields</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr><td>status</td> <td><span><span><!----> <span>
+            object
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>One of: <code>pending, added, declined, mapping</code></li></ul></div></td></tr></tbody></table></div><div class="entity"><h2 id="entity-parserspullbody"><a href="#entity-parserspullbody" class="header-anchor">#</a>
+        ParsersPullBody
+    </h2> <p></p> <h4>Fields</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr><td>hashes</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span></span> <!----></td></tr></tbody></table></div><div class="entity"><h2 id="entity-parserspushbody"><a href="#entity-parserspushbody" class="header-anchor">#</a>
+        ParsersPushBody
+    </h2> <p></p> <h4>Fields</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr><td>upsert</td> <td><span><span><!----> 
+            <a href="/entities/#entity-parser">Parser</a>[]
+        </span></span></td> <td><span></span> <!----></td></tr><tr><td>delete</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span></span> <!----></td></tr></tbody></table></div><div class="entity"><h2 id="entity-gettranslationsparameterscompat"><a href="#entity-gettranslationsparameterscompat" class="header-anchor">#</a>
+        GetTranslationsParametersCompat
+    </h2> <p></p> <h4>Fields</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr><td>formatted</td> <td><span><span><!----> <span>
+            object
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>anime</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>episode</td> <td><span><span><!----> <span>
+            number
+        </span></span><span><span>⁠|​⁠</span> <span>
+            string
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>Numeric integer </li></ul></div></td></tr><tr><td>target</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span></span> <!----></td></tr></tbody></table></div><div class="entity"><h2 id="entity-getuserparams"><a href="#entity-getuserparams" class="header-anchor">#</a>
+        GetUserParams
+    </h2> <p></p> <h4>Fields</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr><td>nickname</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>shikiId</td> <td><span><span><!----> <span>
+            number
+        </span></span><span><span>⁠|​⁠</span> <span>
+            string
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>Numeric integer </li></ul></div></td></tr><tr><td>withStat</td> <td><span><span><!----> <span>
+            object
+        </span></span></span></td> <td><span></span> <!----></td></tr></tbody></table></div><div class="entity"><h2 id="entity-patchuserbody"><a href="#entity-patchuserbody" class="header-anchor">#</a>
+        PatchUserBody
+    </h2> <p></p> <h4>Fields</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr><td>admin</td> <td><span><span><!----> <span>
+            boolean
+        </span></span></span></td> <td><span>Toggles user's admin status. Only available to admins.</span> <!----></td></tr><tr><td>moderator</td> <td><span><span><!----> <span>
+            boolean
+        </span></span></span></td> <td><span>Toggles user's moderator status. Only available to admins.</span> <!----></td></tr><tr><td>trusted</td> <td><span><span><!----> <span>
+            boolean
+        </span></span></span></td> <td><span>Toggles user's trusted status. Only available to admins and moderators.</span> <!----></td></tr><tr><td>banned</td> <td><span><span><!----> <span>
+            boolean
+        </span></span></span></td> <td><span>Toggles user's banned status. Only available to admins and moderators.</span> <!----></td></tr><tr><td>nickname</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>Changes user's nickname. Value must be a spare nickname. Available for current user and for admins.</span> <!----></td></tr><tr><td>avatar</td> <td><span><span><!----> <span>
+            object
+        </span></span></span></td> <td><span>Changes user's avatar. Value must be a URL to image or null. Available for current user and for admins.</span> <!----></td></tr><tr><td>service</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>Changes user's user rate service. Value must exist in <code>external_ids</code> object. Only available for current user</span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>One of: <code>S</code></li></ul></div></td></tr></tbody></table></div><div class="entity"><h2 id="entity-getuserratesparams"><a href="#entity-getuserratesparams" class="header-anchor">#</a>
+        GetUserRatesParams
+    </h2> <p></p> <h4>Fields</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr><td>user_id</td> <td><span><span><!----> <span>
+            number
+        </span></span><span><span>⁠|​⁠</span> <span>
+            string
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>Numeric integer </li></ul></div></td></tr><tr><td>target_id</td> <td><span><span><!----> <span>
+            number
+        </span></span><span><span>⁠|​⁠</span> <span>
+            string
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>Numeric integer </li></ul></div></td></tr><tr><td>target_type</td> <td><span><span><!----> <span>
+            object
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>One of: <code>anime, manga</code></li></ul></div></td></tr><tr><td>status</td> <td><span><span><!----> <span>
+            object
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>One of: <code>planned, in_progress, completed, on_hold, dropped</code></li></ul></div></td></tr></tbody></table></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">5/28/2020, 8:53:31 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/endpoints/" class="prev">
+        Endpoints
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.ca4d2e0d.js" defer></script><script src="/assets/js/2.0e07b844.js" defer></script><script src="/assets/js/11.03f0caff.js" defer></script><script src="/assets/js/4.55073f4c.js" defer></script>
+  </body>
+</html>

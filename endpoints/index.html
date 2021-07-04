@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Endpoints | PlaShiki Documentation</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    
+    <meta name="description" content="">
+    <link rel="preload" href="/assets/css/0.styles.81630486.css" as="style"><link rel="preload" href="/assets/js/app.ca4d2e0d.js" as="script"><link rel="preload" href="/assets/js/2.0e07b844.js" as="script"><link rel="preload" href="/assets/js/10.7340fc84.js" as="script"><link rel="preload" href="/assets/js/3.8a841bdf.js" as="script"><link rel="prefetch" href="/assets/js/11.03f0caff.js"><link rel="prefetch" href="/assets/js/4.55073f4c.js"><link rel="prefetch" href="/assets/js/5.1c0b950b.js"><link rel="prefetch" href="/assets/js/6.efe1cf05.js"><link rel="prefetch" href="/assets/js/7.9263b0f8.js"><link rel="prefetch" href="/assets/js/8.c45afeec.js"><link rel="prefetch" href="/assets/js/9.c788bd65.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.81630486.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">PlaShiki Documentation</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"> <a href="https://github.com/plashiki/backend" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"> <a href="https://github.com/plashiki/backend" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/" aria-current="page" class="sidebar-link">Starting point</a></li><li><a href="/endpoints/" aria-current="page" class="active sidebar-link">Endpoints</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#statistics" class="sidebar-link">Statistics</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#get-raw-statistics" class="sidebar-link">Get raw statistics</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#control-users" class="sidebar-link">Control users</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#get-users" class="sidebar-link">Get users</a></li><li class="sidebar-sub-header"><a href="/endpoints/#add-donation-expense" class="sidebar-link">Add donation/expense</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#oauth-applications" class="sidebar-link">OAuth applications</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#get-user-s-oauth-applications" class="sidebar-link">Get user's OAuth applications</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-all-oauth-applications" class="sidebar-link">Get all OAuth applications</a></li><li class="sidebar-sub-header"><a href="/endpoints/#create-oauth-application" class="sidebar-link">Create OAuth application</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-oauth-application" class="sidebar-link">Get OAuth application</a></li><li class="sidebar-sub-header"><a href="/endpoints/#revoke-application-credentials" class="sidebar-link">Revoke application credentials</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-authorized-applications" class="sidebar-link">Get authorized applications</a></li><li class="sidebar-sub-header"><a href="/endpoints/#revoke-authorization" class="sidebar-link">Revoke authorization</a></li><li class="sidebar-sub-header"><a href="/endpoints/#delete-application" class="sidebar-link">Delete application</a></li><li class="sidebar-sub-header"><a href="/endpoints/#edit-application" class="sidebar-link">Edit application</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#donators" class="sidebar-link">Donators</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#top-donators" class="sidebar-link">Top donators</a></li><li class="sidebar-sub-header"><a href="/endpoints/#donators-from" class="sidebar-link">Donators from</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#submissions-reports" class="sidebar-link">Submissions &amp; reports</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#new-submission" class="sidebar-link">New submission</a></li><li class="sidebar-sub-header"><a href="/endpoints/#new-report" class="sidebar-link">New report</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-submissions" class="sidebar-link">Get submissions</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-reports" class="sidebar-link">Get reports</a></li><li class="sidebar-sub-header"><a href="/endpoints/#update-submission" class="sidebar-link">Update submission</a></li><li class="sidebar-sub-header"><a href="/endpoints/#delete-a-report" class="sidebar-link">Delete a report</a></li><li class="sidebar-sub-header"><a href="/endpoints/#re-open-a-report" class="sidebar-link">Re-open a report</a></li><li class="sidebar-sub-header"><a href="/endpoints/#delete-a-submission" class="sidebar-link">Delete a submission</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-decline-reason" class="sidebar-link">Get decline reason</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#internal" class="sidebar-link">Internal</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#ping" class="sidebar-link">Ping</a></li><li class="sidebar-sub-header"><a href="/endpoints/#captcha" class="sidebar-link">Captcha</a></li><li class="sidebar-sub-header"><a href="/endpoints/#external-batch-addition" class="sidebar-link">External batch addition</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#mappings" class="sidebar-link">Mappings</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#get-mapping" class="sidebar-link">Get mapping</a></li><li class="sidebar-sub-header"><a href="/endpoints/#extend-mappings" class="sidebar-link">Extend mappings</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#moderation" class="sidebar-link">Moderation</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#recent-submissions-reports" class="sidebar-link">Recent submissions/reports</a></li><li class="sidebar-sub-header"><a href="/endpoints/#process-a-submission" class="sidebar-link">Process a submission</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-report" class="sidebar-link">Get report</a></li><li class="sidebar-sub-header"><a href="/endpoints/#process-a-report" class="sidebar-link">Process a report</a></li><li class="sidebar-sub-header"><a href="/endpoints/#make-report-complex" class="sidebar-link">Make report complex</a></li><li class="sidebar-sub-header"><a href="/endpoints/#batch-update-translations" class="sidebar-link">Batch update translations</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-translations-in-group" class="sidebar-link">Get translations in group</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-player-meta-information" class="sidebar-link">Get player meta information</a></li><li class="sidebar-sub-header"><a href="/endpoints/#batch-delete-translations" class="sidebar-link">Batch delete translations</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-moderation-statistics" class="sidebar-link">Get moderation statistics</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#notifications" class="sidebar-link">Notifications</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#subscribe" class="sidebar-link">Subscribe</a></li><li class="sidebar-sub-header"><a href="/endpoints/#unsubscribe" class="sidebar-link">Unsubscribe</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-topics" class="sidebar-link">Get topics</a></li><li class="sidebar-sub-header"><a href="/endpoints/#missed-notifications" class="sidebar-link">Missed notifications</a></li><li class="sidebar-sub-header"><a href="/endpoints/#add-firebase-token" class="sidebar-link">Add Firebase token</a></li><li class="sidebar-sub-header"><a href="/endpoints/#remove-firebase-token" class="sidebar-link">Remove Firebase token</a></li><li class="sidebar-sub-header"><a href="/endpoints/#mark-notifications-as-seen" class="sidebar-link">Mark notifications as seen</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#oauth" class="sidebar-link">OAuth</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#start-implicit-flow" class="sidebar-link">Start implicit flow</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#parsers" class="sidebar-link">Parsers</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#run-a-parser" class="sidebar-link">Run a Parser</a></li><li class="sidebar-sub-header"><a href="/endpoints/#pull-parsers" class="sidebar-link">Pull parsers</a></li><li class="sidebar-sub-header"><a href="/endpoints/#push-parsers" class="sidebar-link">Push parsers</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-parsers-state" class="sidebar-link">Get parsers state</a></li><li class="sidebar-sub-header"><a href="/endpoints/#start-parsers" class="sidebar-link">Start parsers</a></li><li class="sidebar-sub-header"><a href="/endpoints/#list-parsers" class="sidebar-link">List parsers</a></li><li class="sidebar-sub-header"><a href="/endpoints/#toggle-parsers" class="sidebar-link">Toggle parsers</a></li><li class="sidebar-sub-header"><a href="/endpoints/#parser-storage" class="sidebar-link">Parser storage</a></li><li class="sidebar-sub-header"><a href="/endpoints/#modify-parser-storage" class="sidebar-link">Modify parser storage</a></li><li class="sidebar-sub-header"><a href="/endpoints/#remove-from-parser-storage" class="sidebar-link">Remove from parser storage</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#translations" class="sidebar-link">Translations</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#get-media-translations" class="sidebar-link">Get media translations</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-recent-translations" class="sidebar-link">Get recent translations</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-translations" class="sidebar-link">Get translations</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-available-media-parts" class="sidebar-link">Get available media parts</a></li><li class="sidebar-sub-header"><a href="/endpoints/#query-anime-translations" class="sidebar-link">Query anime translations</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-anime-translations-by-anime-id" class="sidebar-link">Get anime translations by anime ID</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-anime-translations-by-anime-id-and-episode" class="sidebar-link">Get anime translations by anime ID and episode</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-translation" class="sidebar-link">Get translation</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#users" class="sidebar-link">Users</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#get-user" class="sidebar-link">Get user</a></li><li class="sidebar-sub-header"><a href="/endpoints/#patch-a-user" class="sidebar-link">Patch a user</a></li><li class="sidebar-sub-header"><a href="/endpoints/#control-user-language" class="sidebar-link">Control user language</a></li><li class="sidebar-sub-header"><a href="/endpoints/#disconnect-user-service" class="sidebar-link">Disconnect user service</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-user-by-parameters" class="sidebar-link">Get user by parameters</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#user-rates" class="sidebar-link">User rates</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#get-user-rates" class="sidebar-link">Get user rates</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-single-user-rate" class="sidebar-link">Get single user rate</a></li><li class="sidebar-sub-header"><a href="/endpoints/#create-a-user-rate" class="sidebar-link">Create a user rate</a></li><li class="sidebar-sub-header"><a href="/endpoints/#update-a-user-rate" class="sidebar-link">Update a user rate</a></li><li class="sidebar-sub-header"><a href="/endpoints/#delete-a-user-rate" class="sidebar-link">Delete a user rate</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#statistics" class="sidebar-link">Statistics</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#get-raw-statistics" class="sidebar-link">Get raw statistics</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#control-users" class="sidebar-link">Control users</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#get-users" class="sidebar-link">Get users</a></li><li class="sidebar-sub-header"><a href="/endpoints/#add-donation-expense" class="sidebar-link">Add donation/expense</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#oauth-applications" class="sidebar-link">OAuth applications</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#get-user-s-oauth-applications" class="sidebar-link">Get user's OAuth applications</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-all-oauth-applications" class="sidebar-link">Get all OAuth applications</a></li><li class="sidebar-sub-header"><a href="/endpoints/#create-oauth-application" class="sidebar-link">Create OAuth application</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-oauth-application" class="sidebar-link">Get OAuth application</a></li><li class="sidebar-sub-header"><a href="/endpoints/#revoke-application-credentials" class="sidebar-link">Revoke application credentials</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-authorized-applications" class="sidebar-link">Get authorized applications</a></li><li class="sidebar-sub-header"><a href="/endpoints/#revoke-authorization" class="sidebar-link">Revoke authorization</a></li><li class="sidebar-sub-header"><a href="/endpoints/#delete-application" class="sidebar-link">Delete application</a></li><li class="sidebar-sub-header"><a href="/endpoints/#edit-application" class="sidebar-link">Edit application</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#donators" class="sidebar-link">Donators</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#top-donators" class="sidebar-link">Top donators</a></li><li class="sidebar-sub-header"><a href="/endpoints/#donators-from" class="sidebar-link">Donators from</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#submissions-reports" class="sidebar-link">Submissions &amp; reports</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#new-submission" class="sidebar-link">New submission</a></li><li class="sidebar-sub-header"><a href="/endpoints/#new-report" class="sidebar-link">New report</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-submissions" class="sidebar-link">Get submissions</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-reports" class="sidebar-link">Get reports</a></li><li class="sidebar-sub-header"><a href="/endpoints/#update-submission" class="sidebar-link">Update submission</a></li><li class="sidebar-sub-header"><a href="/endpoints/#delete-a-report" class="sidebar-link">Delete a report</a></li><li class="sidebar-sub-header"><a href="/endpoints/#re-open-a-report" class="sidebar-link">Re-open a report</a></li><li class="sidebar-sub-header"><a href="/endpoints/#delete-a-submission" class="sidebar-link">Delete a submission</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-decline-reason" class="sidebar-link">Get decline reason</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#internal" class="sidebar-link">Internal</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#ping" class="sidebar-link">Ping</a></li><li class="sidebar-sub-header"><a href="/endpoints/#captcha" class="sidebar-link">Captcha</a></li><li class="sidebar-sub-header"><a href="/endpoints/#external-batch-addition" class="sidebar-link">External batch addition</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#mappings" class="sidebar-link">Mappings</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#get-mapping" class="sidebar-link">Get mapping</a></li><li class="sidebar-sub-header"><a href="/endpoints/#extend-mappings" class="sidebar-link">Extend mappings</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#moderation" class="sidebar-link">Moderation</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#recent-submissions-reports" class="sidebar-link">Recent submissions/reports</a></li><li class="sidebar-sub-header"><a href="/endpoints/#process-a-submission" class="sidebar-link">Process a submission</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-report" class="sidebar-link">Get report</a></li><li class="sidebar-sub-header"><a href="/endpoints/#process-a-report" class="sidebar-link">Process a report</a></li><li class="sidebar-sub-header"><a href="/endpoints/#make-report-complex" class="sidebar-link">Make report complex</a></li><li class="sidebar-sub-header"><a href="/endpoints/#batch-update-translations" class="sidebar-link">Batch update translations</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-translations-in-group" class="sidebar-link">Get translations in group</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-player-meta-information" class="sidebar-link">Get player meta information</a></li><li class="sidebar-sub-header"><a href="/endpoints/#batch-delete-translations" class="sidebar-link">Batch delete translations</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-moderation-statistics" class="sidebar-link">Get moderation statistics</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#notifications" class="sidebar-link">Notifications</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#subscribe" class="sidebar-link">Subscribe</a></li><li class="sidebar-sub-header"><a href="/endpoints/#unsubscribe" class="sidebar-link">Unsubscribe</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-topics" class="sidebar-link">Get topics</a></li><li class="sidebar-sub-header"><a href="/endpoints/#missed-notifications" class="sidebar-link">Missed notifications</a></li><li class="sidebar-sub-header"><a href="/endpoints/#add-firebase-token" class="sidebar-link">Add Firebase token</a></li><li class="sidebar-sub-header"><a href="/endpoints/#remove-firebase-token" class="sidebar-link">Remove Firebase token</a></li><li class="sidebar-sub-header"><a href="/endpoints/#mark-notifications-as-seen" class="sidebar-link">Mark notifications as seen</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#oauth" class="sidebar-link">OAuth</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#start-implicit-flow" class="sidebar-link">Start implicit flow</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#parsers" class="sidebar-link">Parsers</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#run-a-parser" class="sidebar-link">Run a Parser</a></li><li class="sidebar-sub-header"><a href="/endpoints/#pull-parsers" class="sidebar-link">Pull parsers</a></li><li class="sidebar-sub-header"><a href="/endpoints/#push-parsers" class="sidebar-link">Push parsers</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-parsers-state" class="sidebar-link">Get parsers state</a></li><li class="sidebar-sub-header"><a href="/endpoints/#start-parsers" class="sidebar-link">Start parsers</a></li><li class="sidebar-sub-header"><a href="/endpoints/#list-parsers" class="sidebar-link">List parsers</a></li><li class="sidebar-sub-header"><a href="/endpoints/#toggle-parsers" class="sidebar-link">Toggle parsers</a></li><li class="sidebar-sub-header"><a href="/endpoints/#parser-storage" class="sidebar-link">Parser storage</a></li><li class="sidebar-sub-header"><a href="/endpoints/#modify-parser-storage" class="sidebar-link">Modify parser storage</a></li><li class="sidebar-sub-header"><a href="/endpoints/#remove-from-parser-storage" class="sidebar-link">Remove from parser storage</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#translations" class="sidebar-link">Translations</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#get-media-translations" class="sidebar-link">Get media translations</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-recent-translations" class="sidebar-link">Get recent translations</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-translations" class="sidebar-link">Get translations</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-available-media-parts" class="sidebar-link">Get available media parts</a></li><li class="sidebar-sub-header"><a href="/endpoints/#query-anime-translations" class="sidebar-link">Query anime translations</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-anime-translations-by-anime-id" class="sidebar-link">Get anime translations by anime ID</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-anime-translations-by-anime-id-and-episode" class="sidebar-link">Get anime translations by anime ID and episode</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-translation" class="sidebar-link">Get translation</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#users" class="sidebar-link">Users</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#get-user" class="sidebar-link">Get user</a></li><li class="sidebar-sub-header"><a href="/endpoints/#patch-a-user" class="sidebar-link">Patch a user</a></li><li class="sidebar-sub-header"><a href="/endpoints/#control-user-language" class="sidebar-link">Control user language</a></li><li class="sidebar-sub-header"><a href="/endpoints/#disconnect-user-service" class="sidebar-link">Disconnect user service</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-user-by-parameters" class="sidebar-link">Get user by parameters</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#user-rates" class="sidebar-link">User rates</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#get-user-rates" class="sidebar-link">Get user rates</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-single-user-rate" class="sidebar-link">Get single user rate</a></li><li class="sidebar-sub-header"><a href="/endpoints/#create-a-user-rate" class="sidebar-link">Create a user rate</a></li><li class="sidebar-sub-header"><a href="/endpoints/#update-a-user-rate" class="sidebar-link">Update a user rate</a></li><li class="sidebar-sub-header"><a href="/endpoints/#delete-a-user-rate" class="sidebar-link">Delete a user rate</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#statistics" class="sidebar-link">Statistics</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#get-raw-statistics" class="sidebar-link">Get raw statistics</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#control-users" class="sidebar-link">Control users</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#get-users" class="sidebar-link">Get users</a></li><li class="sidebar-sub-header"><a href="/endpoints/#add-donation-expense" class="sidebar-link">Add donation/expense</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#oauth-applications" class="sidebar-link">OAuth applications</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#get-user-s-oauth-applications" class="sidebar-link">Get user's OAuth applications</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-all-oauth-applications" class="sidebar-link">Get all OAuth applications</a></li><li class="sidebar-sub-header"><a href="/endpoints/#create-oauth-application" class="sidebar-link">Create OAuth application</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-oauth-application" class="sidebar-link">Get OAuth application</a></li><li class="sidebar-sub-header"><a href="/endpoints/#revoke-application-credentials" class="sidebar-link">Revoke application credentials</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-authorized-applications" class="sidebar-link">Get authorized applications</a></li><li class="sidebar-sub-header"><a href="/endpoints/#revoke-authorization" class="sidebar-link">Revoke authorization</a></li><li class="sidebar-sub-header"><a href="/endpoints/#delete-application" class="sidebar-link">Delete application</a></li><li class="sidebar-sub-header"><a href="/endpoints/#edit-application" class="sidebar-link">Edit application</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#donators" class="sidebar-link">Donators</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#top-donators" class="sidebar-link">Top donators</a></li><li class="sidebar-sub-header"><a href="/endpoints/#donators-from" class="sidebar-link">Donators from</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#submissions-reports" class="sidebar-link">Submissions &amp; reports</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#new-submission" class="sidebar-link">New submission</a></li><li class="sidebar-sub-header"><a href="/endpoints/#new-report" class="sidebar-link">New report</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-submissions" class="sidebar-link">Get submissions</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-reports" class="sidebar-link">Get reports</a></li><li class="sidebar-sub-header"><a href="/endpoints/#update-submission" class="sidebar-link">Update submission</a></li><li class="sidebar-sub-header"><a href="/endpoints/#delete-a-report" class="sidebar-link">Delete a report</a></li><li class="sidebar-sub-header"><a href="/endpoints/#re-open-a-report" class="sidebar-link">Re-open a report</a></li><li class="sidebar-sub-header"><a href="/endpoints/#delete-a-submission" class="sidebar-link">Delete a submission</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-decline-reason" class="sidebar-link">Get decline reason</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#internal" class="sidebar-link">Internal</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#ping" class="sidebar-link">Ping</a></li><li class="sidebar-sub-header"><a href="/endpoints/#captcha" class="sidebar-link">Captcha</a></li><li class="sidebar-sub-header"><a href="/endpoints/#external-batch-addition" class="sidebar-link">External batch addition</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#mappings" class="sidebar-link">Mappings</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#get-mapping" class="sidebar-link">Get mapping</a></li><li class="sidebar-sub-header"><a href="/endpoints/#extend-mappings" class="sidebar-link">Extend mappings</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#moderation" class="sidebar-link">Moderation</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#recent-submissions-reports" class="sidebar-link">Recent submissions/reports</a></li><li class="sidebar-sub-header"><a href="/endpoints/#process-a-submission" class="sidebar-link">Process a submission</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-report" class="sidebar-link">Get report</a></li><li class="sidebar-sub-header"><a href="/endpoints/#process-a-report" class="sidebar-link">Process a report</a></li><li class="sidebar-sub-header"><a href="/endpoints/#make-report-complex" class="sidebar-link">Make report complex</a></li><li class="sidebar-sub-header"><a href="/endpoints/#batch-update-translations" class="sidebar-link">Batch update translations</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-translations-in-group" class="sidebar-link">Get translations in group</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-player-meta-information" class="sidebar-link">Get player meta information</a></li><li class="sidebar-sub-header"><a href="/endpoints/#batch-delete-translations" class="sidebar-link">Batch delete translations</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-moderation-statistics" class="sidebar-link">Get moderation statistics</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#notifications" class="sidebar-link">Notifications</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#subscribe" class="sidebar-link">Subscribe</a></li><li class="sidebar-sub-header"><a href="/endpoints/#unsubscribe" class="sidebar-link">Unsubscribe</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-topics" class="sidebar-link">Get topics</a></li><li class="sidebar-sub-header"><a href="/endpoints/#missed-notifications" class="sidebar-link">Missed notifications</a></li><li class="sidebar-sub-header"><a href="/endpoints/#add-firebase-token" class="sidebar-link">Add Firebase token</a></li><li class="sidebar-sub-header"><a href="/endpoints/#remove-firebase-token" class="sidebar-link">Remove Firebase token</a></li><li class="sidebar-sub-header"><a href="/endpoints/#mark-notifications-as-seen" class="sidebar-link">Mark notifications as seen</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#oauth" class="sidebar-link">OAuth</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#start-implicit-flow" class="sidebar-link">Start implicit flow</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#parsers" class="sidebar-link">Parsers</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#run-a-parser" class="sidebar-link">Run a Parser</a></li><li class="sidebar-sub-header"><a href="/endpoints/#pull-parsers" class="sidebar-link">Pull parsers</a></li><li class="sidebar-sub-header"><a href="/endpoints/#push-parsers" class="sidebar-link">Push parsers</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-parsers-state" class="sidebar-link">Get parsers state</a></li><li class="sidebar-sub-header"><a href="/endpoints/#start-parsers" class="sidebar-link">Start parsers</a></li><li class="sidebar-sub-header"><a href="/endpoints/#list-parsers" class="sidebar-link">List parsers</a></li><li class="sidebar-sub-header"><a href="/endpoints/#toggle-parsers" class="sidebar-link">Toggle parsers</a></li><li class="sidebar-sub-header"><a href="/endpoints/#parser-storage" class="sidebar-link">Parser storage</a></li><li class="sidebar-sub-header"><a href="/endpoints/#modify-parser-storage" class="sidebar-link">Modify parser storage</a></li><li class="sidebar-sub-header"><a href="/endpoints/#remove-from-parser-storage" class="sidebar-link">Remove from parser storage</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#translations" class="sidebar-link">Translations</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#get-media-translations" class="sidebar-link">Get media translations</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-recent-translations" class="sidebar-link">Get recent translations</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-translations" class="sidebar-link">Get translations</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-available-media-parts" class="sidebar-link">Get available media parts</a></li><li class="sidebar-sub-header"><a href="/endpoints/#query-anime-translations" class="sidebar-link">Query anime translations</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-anime-translations-by-anime-id" class="sidebar-link">Get anime translations by anime ID</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-anime-translations-by-anime-id-and-episode" class="sidebar-link">Get anime translations by anime ID and episode</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-translation" class="sidebar-link">Get translation</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#users" class="sidebar-link">Users</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#get-user" class="sidebar-link">Get user</a></li><li class="sidebar-sub-header"><a href="/endpoints/#patch-a-user" class="sidebar-link">Patch a user</a></li><li class="sidebar-sub-header"><a href="/endpoints/#control-user-language" class="sidebar-link">Control user language</a></li><li class="sidebar-sub-header"><a href="/endpoints/#disconnect-user-service" class="sidebar-link">Disconnect user service</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-user-by-parameters" class="sidebar-link">Get user by parameters</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#user-rates" class="sidebar-link">User rates</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#get-user-rates" class="sidebar-link">Get user rates</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-single-user-rate" class="sidebar-link">Get single user rate</a></li><li class="sidebar-sub-header"><a href="/endpoints/#create-a-user-rate" class="sidebar-link">Create a user rate</a></li><li class="sidebar-sub-header"><a href="/endpoints/#update-a-user-rate" class="sidebar-link">Update a user rate</a></li><li class="sidebar-sub-header"><a href="/endpoints/#delete-a-user-rate" class="sidebar-link">Delete a user rate</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#statistics" class="sidebar-link">Statistics</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#get-raw-statistics" class="sidebar-link">Get raw statistics</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#control-users" class="sidebar-link">Control users</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#get-users" class="sidebar-link">Get users</a></li><li class="sidebar-sub-header"><a href="/endpoints/#add-donation-expense" class="sidebar-link">Add donation/expense</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#oauth-applications" class="sidebar-link">OAuth applications</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#get-user-s-oauth-applications" class="sidebar-link">Get user's OAuth applications</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-all-oauth-applications" class="sidebar-link">Get all OAuth applications</a></li><li class="sidebar-sub-header"><a href="/endpoints/#create-oauth-application" class="sidebar-link">Create OAuth application</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-oauth-application" class="sidebar-link">Get OAuth application</a></li><li class="sidebar-sub-header"><a href="/endpoints/#revoke-application-credentials" class="sidebar-link">Revoke application credentials</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-authorized-applications" class="sidebar-link">Get authorized applications</a></li><li class="sidebar-sub-header"><a href="/endpoints/#revoke-authorization" class="sidebar-link">Revoke authorization</a></li><li class="sidebar-sub-header"><a href="/endpoints/#delete-application" class="sidebar-link">Delete application</a></li><li class="sidebar-sub-header"><a href="/endpoints/#edit-application" class="sidebar-link">Edit application</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#donators" class="sidebar-link">Donators</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#top-donators" class="sidebar-link">Top donators</a></li><li class="sidebar-sub-header"><a href="/endpoints/#donators-from" class="sidebar-link">Donators from</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#submissions-reports" class="sidebar-link">Submissions &amp; reports</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#new-submission" class="sidebar-link">New submission</a></li><li class="sidebar-sub-header"><a href="/endpoints/#new-report" class="sidebar-link">New report</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-submissions" class="sidebar-link">Get submissions</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-reports" class="sidebar-link">Get reports</a></li><li class="sidebar-sub-header"><a href="/endpoints/#update-submission" class="sidebar-link">Update submission</a></li><li class="sidebar-sub-header"><a href="/endpoints/#delete-a-report" class="sidebar-link">Delete a report</a></li><li class="sidebar-sub-header"><a href="/endpoints/#re-open-a-report" class="sidebar-link">Re-open a report</a></li><li class="sidebar-sub-header"><a href="/endpoints/#delete-a-submission" class="sidebar-link">Delete a submission</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-decline-reason" class="sidebar-link">Get decline reason</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#internal" class="sidebar-link">Internal</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#ping" class="sidebar-link">Ping</a></li><li class="sidebar-sub-header"><a href="/endpoints/#captcha" class="sidebar-link">Captcha</a></li><li class="sidebar-sub-header"><a href="/endpoints/#external-batch-addition" class="sidebar-link">External batch addition</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#mappings" class="sidebar-link">Mappings</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#get-mapping" class="sidebar-link">Get mapping</a></li><li class="sidebar-sub-header"><a href="/endpoints/#extend-mappings" class="sidebar-link">Extend mappings</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#moderation" class="sidebar-link">Moderation</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#recent-submissions-reports" class="sidebar-link">Recent submissions/reports</a></li><li class="sidebar-sub-header"><a href="/endpoints/#process-a-submission" class="sidebar-link">Process a submission</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-report" class="sidebar-link">Get report</a></li><li class="sidebar-sub-header"><a href="/endpoints/#process-a-report" class="sidebar-link">Process a report</a></li><li class="sidebar-sub-header"><a href="/endpoints/#make-report-complex" class="sidebar-link">Make report complex</a></li><li class="sidebar-sub-header"><a href="/endpoints/#batch-update-translations" class="sidebar-link">Batch update translations</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-translations-in-group" class="sidebar-link">Get translations in group</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-player-meta-information" class="sidebar-link">Get player meta information</a></li><li class="sidebar-sub-header"><a href="/endpoints/#batch-delete-translations" class="sidebar-link">Batch delete translations</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-moderation-statistics" class="sidebar-link">Get moderation statistics</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#notifications" class="sidebar-link">Notifications</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#subscribe" class="sidebar-link">Subscribe</a></li><li class="sidebar-sub-header"><a href="/endpoints/#unsubscribe" class="sidebar-link">Unsubscribe</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-topics" class="sidebar-link">Get topics</a></li><li class="sidebar-sub-header"><a href="/endpoints/#missed-notifications" class="sidebar-link">Missed notifications</a></li><li class="sidebar-sub-header"><a href="/endpoints/#add-firebase-token" class="sidebar-link">Add Firebase token</a></li><li class="sidebar-sub-header"><a href="/endpoints/#remove-firebase-token" class="sidebar-link">Remove Firebase token</a></li><li class="sidebar-sub-header"><a href="/endpoints/#mark-notifications-as-seen" class="sidebar-link">Mark notifications as seen</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#oauth" class="sidebar-link">OAuth</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#start-implicit-flow" class="sidebar-link">Start implicit flow</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#parsers" class="sidebar-link">Parsers</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#run-a-parser" class="sidebar-link">Run a Parser</a></li><li class="sidebar-sub-header"><a href="/endpoints/#pull-parsers" class="sidebar-link">Pull parsers</a></li><li class="sidebar-sub-header"><a href="/endpoints/#push-parsers" class="sidebar-link">Push parsers</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-parsers-state" class="sidebar-link">Get parsers state</a></li><li class="sidebar-sub-header"><a href="/endpoints/#start-parsers" class="sidebar-link">Start parsers</a></li><li class="sidebar-sub-header"><a href="/endpoints/#list-parsers" class="sidebar-link">List parsers</a></li><li class="sidebar-sub-header"><a href="/endpoints/#toggle-parsers" class="sidebar-link">Toggle parsers</a></li><li class="sidebar-sub-header"><a href="/endpoints/#parser-storage" class="sidebar-link">Parser storage</a></li><li class="sidebar-sub-header"><a href="/endpoints/#modify-parser-storage" class="sidebar-link">Modify parser storage</a></li><li class="sidebar-sub-header"><a href="/endpoints/#remove-from-parser-storage" class="sidebar-link">Remove from parser storage</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#translations" class="sidebar-link">Translations</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#get-media-translations" class="sidebar-link">Get media translations</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-recent-translations" class="sidebar-link">Get recent translations</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-translations" class="sidebar-link">Get translations</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-available-media-parts" class="sidebar-link">Get available media parts</a></li><li class="sidebar-sub-header"><a href="/endpoints/#query-anime-translations" class="sidebar-link">Query anime translations</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-anime-translations-by-anime-id" class="sidebar-link">Get anime translations by anime ID</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-anime-translations-by-anime-id-and-episode" class="sidebar-link">Get anime translations by anime ID and episode</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-translation" class="sidebar-link">Get translation</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#users" class="sidebar-link">Users</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#get-user" class="sidebar-link">Get user</a></li><li class="sidebar-sub-header"><a href="/endpoints/#patch-a-user" class="sidebar-link">Patch a user</a></li><li class="sidebar-sub-header"><a href="/endpoints/#control-user-language" class="sidebar-link">Control user language</a></li><li class="sidebar-sub-header"><a href="/endpoints/#disconnect-user-service" class="sidebar-link">Disconnect user service</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-user-by-parameters" class="sidebar-link">Get user by parameters</a></li></ul></li><li class="sidebar-sub-header"><a href="/endpoints/#user-rates" class="sidebar-link">User rates</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/endpoints/#get-user-rates" class="sidebar-link">Get user rates</a></li><li class="sidebar-sub-header"><a href="/endpoints/#get-single-user-rate" class="sidebar-link">Get single user rate</a></li><li class="sidebar-sub-header"><a href="/endpoints/#create-a-user-rate" class="sidebar-link">Create a user rate</a></li><li class="sidebar-sub-header"><a href="/endpoints/#update-a-user-rate" class="sidebar-link">Update a user rate</a></li><li class="sidebar-sub-header"><a href="/endpoints/#delete-a-user-rate" class="sidebar-link">Delete a user rate</a></li></ul></li></ul></li><li><a href="/entities/" class="sidebar-link">Entities</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="endpoints"><a href="#endpoints" class="header-anchor">#</a> Endpoints</h1> <p>All endpoints are relative to the base url: <code>https://plashiki.su/api</code></p> <div class="endpoint"><h2 id="statistics"><a href="#statistics" class="header-anchor">#</a>
+        Statistics
+    </h2> <!----> <p class="group-desc">Receive statistics. Requires admin rights.</p> <h4>Special features:</h4> <ul class="features"><li>Requires auth</li><li>Requires <code>admin = true</code> on current user</li></ul> <!----> <!----> <h4>Throws</h4> <table><thead><tr><td><div style="min-width:160px">Error</div></td> <td>Description</td></tr></thead> <tbody><tr><td><code>NO_AUTH</code></td> <td>Not logged in</td></tr><tr><td><code>ACCESS_DENIED</code></td> <td>Flag not set</td></tr></tbody></table> <div><!----> <div class="endpoint"><h3 id="get-raw-statistics"><a href="#get-raw-statistics" class="header-anchor">#</a>
+        Get raw statistics
+    </h3> <div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/v2/admin/statistics/</span></div></div> <p class="action-desc">Retrieve raw statistic days for a given range.</p> <!----> <!----> <h4>Returns</h4> <span class="type-display--mono"><span><!----> 
+            <a href="/entities/#entity-statisticsday">StatisticsDay</a>[]
+        </span></span> <p>For all days in a given range <b>that have statistics info</b> an item will end up there.Order is not guaranteed.</p> <!----> <!----></div></div></div><div class="endpoint"><h2 id="control-users"><a href="#control-users" class="header-anchor">#</a>
+        Control users
+    </h2> <!----> <p class="group-desc">Admin-only features related to users.</p> <h4>Special features:</h4> <ul class="features"><li>Requires auth</li><li>Requires <code>admin = true</code> on current user</li></ul> <!----> <!----> <h4>Throws</h4> <table><thead><tr><td><div style="min-width:160px">Error</div></td> <td>Description</td></tr></thead> <tbody><tr><td><code>NO_AUTH</code></td> <td>Not logged in</td></tr><tr><td><code>ACCESS_DENIED</code></td> <td>Flag not set</td></tr></tbody></table> <div><!----> <div class="endpoint"><h3 id="get-users"><a href="#get-users" class="header-anchor">#</a>
+        Get users
+    </h3> <div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/v2/admin/users/list</span></div></div> <p class="action-desc">Get list of users</p> <!----> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><!----> <tr class="params-table--group"><td colspan="3">
+                        Query parameters
+                    </td></tr> <tr><td>?⁠limit</td> <td><span><span><!----> <span>
+            number
+        </span></span><span><span>⁠|​⁠</span> <span>
+            string
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>Numeric integer  in range <b>[0; ∞]</b></li></ul></div></td></tr><tr><td>?⁠offset</td> <td><span><span><!----> <span>
+            number
+        </span></span><span><span>⁠|​⁠</span> <span>
+            string
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>Numeric integer  in range <b>[0; ∞]</b></li></ul></div></td></tr><tr><td>?⁠sort</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span></span> <!----></td></tr> <!----></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> 
+            <a href="/entities/#entity-user">User</a>[]
+        </span></span> <!----> <!----> <!----></div></div><div><hr> <div class="endpoint"><h3 id="add-donation-expense"><a href="#add-donation-expense" class="header-anchor">#</a>
+        Add donation/expense
+    </h3> <div class="method-container method-POST"><span class="method method-POST">POST</span> <div class="path-container"><span class="path">/v2/admin/budget</span></div></div> <p class="action-desc">Add a donation or expense. Will automatically update associated Github file.</p> <!----> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><!----> <!----> <tr class="params-table--group"><td colspan="3">
+                        Body parameters (in JSON)
+                    </td></tr> <tr><td>type</td> <td><span><span><!----> <span>
+            &quot;donation&quot;
+        </span></span><span><span>⁠|​⁠</span> <span>
+            &quot;expense&quot;
+        </span></span></span></td> <td><span>Whether passed entity is a donation or an expense</span> <!----></td></tr><tr><td>date</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>Date of change in format: "DD.MM.YYYY в HH:MM".</span> <!----></td></tr><tr><td>amount</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span>Amount of expense/donation in rubles (RUB)</span> <!----></td></tr><tr><td>comment</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>Comment for an entity. For a donation, if a user nickname is passed and user with such nickname exists, a donation will be added to their counter automatically. For expense, should be a human-readable expense destination</span> <!----></td></tr></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> <span>
+            &quot;OK&quot;
+        </span></span></span> <!----> <!----> <!----></div></div></div><div class="endpoint"><h2 id="oauth-applications"><a href="#oauth-applications" class="header-anchor">#</a>
+        OAuth applications
+    </h2> <!----> <p class="group-desc">Control your OAuth applications. Before using please read about PlaShiki OAuth flow in <b>Starting Point</b> section</p> <h4>Special features:</h4> <ul class="features"><li>Requires auth via cookie</li><li>Requires auth</li></ul> <!----> <!----> <h4>Throws</h4> <table><thead><tr><td><div style="min-width:160px">Error</div></td> <td>Description</td></tr></thead> <tbody><tr><td><code>NO_OAUTH</code></td> <td>Trying to use not OAuth API with OAuth-based auth</td></tr><tr><td><code>NO_AUTH</code></td> <td>Not logged in</td></tr></tbody></table> <div><!----> <div class="endpoint"><h3 id="get-user-s-oauth-applications"><a href="#get-user-s-oauth-applications" class="header-anchor">#</a>
+        Get user's OAuth applications
+    </h3> <div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/v2/applications/</span></div></div> <p class="action-desc">Returns a list of current user's OAuth applications</p> <!----> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><!----> <tr class="params-table--group"><td colspan="3">
+                        Query parameters
+                    </td></tr> <tr><td>?⁠limit</td> <td><span><span><!----> <span>
+            number
+        </span></span><span><span>⁠|​⁠</span> <span>
+            string
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>Numeric integer  in range <b>[0; ∞]</b></li></ul></div></td></tr><tr><td>?⁠offset</td> <td><span><span><!----> <span>
+            number
+        </span></span><span><span>⁠|​⁠</span> <span>
+            string
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>Numeric integer  in range <b>[0; ∞]</b></li></ul></div></td></tr> <!----></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> 
+            <a href="/entities/#entity-oauthapp">OAuthApp</a>[]
+        </span></span> <p>Meta information about apps. Client ID & secret are not available.</p> <!----> <!----></div></div><div><hr> <div class="endpoint"><h3 id="get-all-oauth-applications"><a href="#get-all-oauth-applications" class="header-anchor">#</a>
+        Get all OAuth applications
+    </h3> <div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/v2/applications/all</span></div></div> <p class="action-desc">Returns a list of all OAuth applications. Only for admins.</p> <h4>Special features:</h4> <ul class="features"><li>Requires auth</li><li>Requires <code>admin = true</code> on current user</li></ul> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><!----> <tr class="params-table--group"><td colspan="3">
+                        Query parameters
+                    </td></tr> <tr><td>?⁠limit</td> <td><span><span><!----> <span>
+            number
+        </span></span><span><span>⁠|​⁠</span> <span>
+            string
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>Numeric integer  in range <b>[0; ∞]</b></li></ul></div></td></tr><tr><td>?⁠offset</td> <td><span><span><!----> <span>
+            number
+        </span></span><span><span>⁠|​⁠</span> <span>
+            string
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>Numeric integer  in range <b>[0; ∞]</b></li></ul></div></td></tr> <!----></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> 
+            <a href="/entities/#entity-oauthapp">OAuthApp</a>[]
+        </span></span> <p>Meta information about apps. <code>client_id</code> and <code>client_secret</code> are not available.</p> <h4>Throws</h4> <table><thead><tr><td><div style="min-width:160px">Error</div></td> <td>Description</td></tr></thead> <tbody><tr><td><code>NO_AUTH</code></td> <td>Not logged in</td></tr><tr><td><code>ACCESS_DENIED</code></td> <td>Flag not set</td></tr></tbody></table> <!----></div></div><div><hr> <div class="endpoint"><h3 id="create-oauth-application"><a href="#create-oauth-application" class="header-anchor">#</a>
+        Create OAuth application
+    </h3> <div class="method-container method-POST"><span class="method method-POST">POST</span> <div class="path-container"><span class="path">/v2/applications/</span></div></div> <p class="action-desc">Creates an OAuth application.</p> <h4>Special features:</h4> <ul class="features"><li>Rate limiting at <b>1</b> requests every <b>600</b> seconds</li><li>Requires auth</li><li>Requires <code>banned = false</code> on current user</li></ul> <!----> <h4>Returns</h4> <span class="type-display--mono"><span><!----> 
+            <a href="/entities/#entity-oauthapp">OAuthApp</a>
+        </span></span> <p>Newly created OAuth app. <code>client_id</code> and <code>client_secret</code> are available.</p> <h4>Throws</h4> <table><thead><tr><td><div style="min-width:160px">Error</div></td> <td>Description</td></tr></thead> <tbody><tr><td><code>NO_AUTH</code></td> <td>Not logged in</td></tr><tr><td><code>ACCESS_DENIED</code></td> <td>Flag not set</td></tr></tbody></table> <!----></div></div><div><hr> <div class="endpoint"><h3 id="get-oauth-application"><a href="#get-oauth-application" class="header-anchor">#</a>
+        Get OAuth application
+    </h3> <div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/v2/applications/:id</span></div></div> <p class="action-desc">Get a single OAuth applications. Non-admins can only get own applications.</p> <!----> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr class="params-table--group"><td colspan="3">
+                        URL parameters
+                    </td></tr> <tr><td>:⁠id</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span>Application ID</span> <!----></td></tr> <!----> <!----></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> 
+            <a href="/entities/#entity-oauthapp">OAuthApp</a>
+        </span><span><span>⁠|​⁠</span> <span>
+            null
+        </span></span></span> <p><code>client_id</code> and <code>client_secret</code> are only available for own apps, even for admins.</p> <h4>Throws</h4> <table><thead><tr><td><div style="min-width:160px">Error</div></td> <td>Description</td></tr></thead> <tbody><tr><td><code>ACCESS_DENIED</code></td> <td>Attempt to get information for another user's application.</td></tr></tbody></table> <!----></div></div><div><hr> <div class="endpoint"><h3 id="revoke-application-credentials"><a href="#revoke-application-credentials" class="header-anchor">#</a>
+        Revoke application credentials
+    </h3> <div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/v2/applications/:id/revoke/:field</span></div></div> <p class="action-desc">Revoke application's <code>client_id</code> or <code>client_secret</code>. Current user must be app owner.</p> <!----> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr class="params-table--group"><td colspan="3">
+                        URL parameters
+                    </td></tr> <tr><td>:⁠id</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span>Application ID</span> <!----></td></tr><tr><td>:⁠field</td> <td><span><span><!----> <span>
+            &quot;id&quot;
+        </span></span><span><span>⁠|​⁠</span> <span>
+            &quot;secret&quot;
+        </span></span><span><span>⁠|​⁠</span> <span>
+            &quot;both&quot;
+        </span></span></span></td> <td><span>Which field to revoke. <code>id</code> is for <code>client_id</code>, <code>secret</code> is for <code>client_secret.</code> and <code>both</code> is to revoke both at once.</span> <!----></td></tr> <!----> <!----></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> 
+            <a href="/entities/#entity-oauthapp">OauthApp</a>
+        </span></span> <p>Same application but with different credentials (which are always available)</p> <h4>Throws</h4> <table><thead><tr><td><div style="min-width:160px">Error</div></td> <td>Description</td></tr></thead> <tbody><tr><td><code>NOT_FOUND</code></td> <td>Application was not found</td></tr><tr><td><code>ACCESS_DENIED</code></td> <td>Attempt to modify another user's application.</td></tr></tbody></table> <!----></div></div><div><hr> <div class="endpoint"><h3 id="get-authorized-applications"><a href="#get-authorized-applications" class="header-anchor">#</a>
+        Get authorized applications
+    </h3> <div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/v2/applications/authed</span></div></div> <p class="action-desc">Returns list of applications that current user had given access to.</p> <!----> <!----> <h4>Returns</h4> <span class="type-display--mono"><span><!----> 
+            <a href="/entities/#entity-oauthapp">OauthApp</a>[]
+        </span></span> <p>Only meta information about apps</p> <!----> <!----></div></div><div><hr> <div class="endpoint"><h3 id="revoke-authorization"><a href="#revoke-authorization" class="header-anchor">#</a>
+        Revoke authorization
+    </h3> <div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/v2/applications/:id/revoke/auth</span></div></div> <p class="action-desc">Revoke application access to user account. Meaning that it will destroy all active current user's OAuth sessions for that application</p> <!----> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr class="params-table--group"><td colspan="3">
+                        URL parameters
+                    </td></tr> <tr><td>:⁠id</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span>Application ID for which to revoke access.</span> <!----></td></tr> <!----> <!----></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> <span>
+            true
+        </span></span></span> <!----> <!----> <!----></div></div><div><hr> <div class="endpoint"><h3 id="delete-application"><a href="#delete-application" class="header-anchor">#</a>
+        Delete application
+    </h3> <div class="method-container method-DELETE"><span class="method method-DELETE">DELETE</span> <div class="path-container"><span class="path">/v2/applications/:id</span></div></div> <p class="action-desc">Deleting an application will automatically revoke all active sessions. Can only be done by app owner or admin</p> <!----> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr class="params-table--group"><td colspan="3">
+                        URL parameters
+                    </td></tr> <tr><td>:⁠id</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span>Application ID to delete.</span> <!----></td></tr> <!----> <!----></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> <span>
+            true
+        </span></span></span> <!----> <h4>Throws</h4> <table><thead><tr><td><div style="min-width:160px">Error</div></td> <td>Description</td></tr></thead> <tbody><tr><td><code>NOT_FOUND</code></td> <td>Application was not found</td></tr><tr><td><code>ACCESS_DENIED</code></td> <td>Attempt to delete other user's application</td></tr></tbody></table> <!----></div></div><div><hr> <div class="endpoint"><h3 id="edit-application"><a href="#edit-application" class="header-anchor">#</a>
+        Edit application
+    </h3> <div class="method-container method-PATCH"><span class="method method-PATCH">PATCH</span> <div class="path-container"><span class="path">/v2/applications/:id</span></div></div> <p class="action-desc">Update application fields. You can edit icon, name, description and redirect_uri. Also admins can edit server_scope.</p> <!----> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr class="params-table--group"><td colspan="3">
+                        URL parameters
+                    </td></tr> <tr><td>:⁠id</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span>Application ID to edit.</span> <!----></td></tr> <!----> <!----></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> 
+            <a href="/entities/#entity-oauthapp">OauthApp</a>
+        </span></span> <!----> <h4>Throws</h4> <table><thead><tr><td><div style="min-width:160px">Error</div></td> <td>Description</td></tr></thead> <tbody><tr><td><code>NOT_FOUND</code></td> <td>Application was not found</td></tr><tr><td><code>ACCESS_DENIED</code></td> <td>Attempt to modify other user's application</td></tr></tbody></table> <!----></div></div></div><div class="endpoint"><h2 id="donators"><a href="#donators" class="header-anchor">#</a>
+        Donators
+    </h2> <!----> <p class="group-desc">Fetch information about users who supported the project</p> <!----> <!----> <!----> <!----> <div><!----> <div class="endpoint"><h3 id="top-donators"><a href="#top-donators" class="header-anchor">#</a>
+        Top donators
+    </h3> <div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/v2/donators/top</span></div></div> <p class="action-desc">Returns list of donators, sorted by donation amount (desc)</p> <!----> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><!----> <tr class="params-table--group"><td colspan="3">
+                        Query parameters
+                    </td></tr> <tr><td>?⁠limit</td> <td><span><span><!----> <span>
+            number
+        </span></span><span><span>⁠|​⁠</span> <span>
+            string
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>Numeric integer  in range <b>[0; ∞]</b></li></ul></div></td></tr><tr><td>?⁠offset</td> <td><span><span><!----> <span>
+            number
+        </span></span><span><span>⁠|​⁠</span> <span>
+            string
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>Numeric integer  in range <b>[0; ∞]</b></li></ul></div></td></tr> <!----></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> 
+            <a href="/entities/#entity-user">User</a>[]
+        </span></span> <!----> <!----> <!----></div></div><div><hr> <div class="endpoint"><h3 id="donators-from"><a href="#donators-from" class="header-anchor">#</a>
+        Donators from
+    </h3> <div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/v2/donators/from</span></div></div> <p class="action-desc">Returns list of donators, whose id is one of given. Useful for displaying donation badges in UI</p> <!----> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><!----> <tr class="params-table--group"><td colspan="3">
+                        Query parameters
+                    </td></tr> <tr><td>?⁠ids</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span>List of comma-delimited IDs from which to find donators. Maximum 100.</span> <!----></td></tr><tr><td>?⁠service</td> <td><span><span><!----> 
+            <a href="/entities/#entity-connectableservice">ConnectableService</a>
+        </span></span></td> <td><span>If passed, list of ids will be treated as external ids.</span> <!----></td></tr> <!----></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> 
+            <a href="/entities/#entity-user">User</a>[]
+        </span></span> <!----> <!----> <!----></div></div></div><div class="endpoint"><h2 id="submissions-reports"><a href="#submissions-reports" class="header-anchor">#</a>
+        Submissions &amp; reports
+    </h2> <!----> <p class="group-desc">Control user submissions & reports</p> <h4>Special features:</h4> <ul class="features"><li>Requires auth</li></ul> <!----> <!----> <h4>Throws</h4> <table><thead><tr><td><div style="min-width:160px">Error</div></td> <td>Description</td></tr></thead> <tbody><tr><td><code>NO_AUTH</code></td> <td>Not logged in</td></tr></tbody></table> <div><!----> <div class="endpoint"><h3 id="new-submission"><a href="#new-submission" class="header-anchor">#</a>
+        New submission
+    </h3> <div class="method-container method-POST"><span class="method method-POST">POST</span> <div class="path-container"><span class="path">/v2/submit/new</span></div></div> <p class="action-desc">Submit a new translation. If user is marked as <code>trusted</code> or <code>moderator</code> it will be immediately added, otherwise queued for moderators to check.</p> <h4>Special features:</h4> <ul class="features"><li>Captcha every 72000 seconds</li></ul> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><!----> <!----> <tr class="params-table--group"><td colspan="3">
+                    Body is
+                    <span class="type-display--mono"><span><!----> 
+            <a href="/entities/#entity-submittranslationbody">SubmitTranslationBody</a>
+        </span></span></td></tr></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> 
+            <a href="/entities/#entity-translation">Translation</a>
+        </span></span> <p>To detect whether the translation was added, check for <code>.status</code> field. If it is <code>added</code>, then translation was added</p> <h4>Throws</h4> <table><thead><tr><td><div style="min-width:160px">Error</div></td> <td>Description</td></tr></thead> <tbody><tr><td><code>TRANSLATION_DUPLICATE_N</code></td> <td>Given translation is a duplicate of translation with id N. It may be in <code>pending</code> state. Duplicates are detected by perfect url match</td></tr><tr><td><code>TRANSLATION_DUPLICATE_REP_N</code></td> <td>Given translation is a duplicate of translation with id N, and report was automatically generated.</td></tr><tr><td><code>BANNED</code></td> <td>User was banned from sending translations</td></tr></tbody></table> <!----></div></div><div><hr> <div class="endpoint"><h3 id="new-report"><a href="#new-report" class="header-anchor">#</a>
+        New report
+    </h3> <div class="method-container method-POST"><span class="method method-POST">POST</span> <div class="path-container"><span class="path">/v2/submit/report</span></div></div> <p class="action-desc">Submit a new report. If user is marked as <code>moderator</code> and there is <code>edit</code> it will be automatically processed, otherwise queued for moderators to check.</p> <h4>Special features:</h4> <ul class="features"><li>Captcha every 7200 seconds</li></ul> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><!----> <!----> <tr class="params-table--group"><td colspan="3">
+                    Body is
+                    <span class="type-display--mono"><span><!----> 
+            <a href="/entities/#entity-submitreportbody">SubmitReportBody</a>
+        </span></span></td></tr></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> 
+            <a href="/entities/#entity-report">Report</a>
+        </span></span> <!----> <h4>Throws</h4> <table><thead><tr><td><div style="min-width:160px">Error</div></td> <td>Description</td></tr></thead> <tbody><tr><td><code>BANNED</code></td> <td>User was banned from sending translations</td></tr><tr><td><code>NOT_FOUND</code></td> <td>Translation with given translation_id does not exist</td></tr></tbody></table> <!----></div></div><div><hr> <div class="endpoint"><h3 id="get-submissions"><a href="#get-submissions" class="header-anchor">#</a>
+        Get submissions
+    </h3> <div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/v2/submissions</span></div></div> <p class="action-desc">Get a bunch of recent submissions</p> <!----> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><!----> <tr class="params-table--group"><td colspan="3">
+                        Query parameters
+                    </td></tr> <tr><td>?⁠limit</td> <td><span><span><!----> <span>
+            number
+        </span></span><span><span>⁠|​⁠</span> <span>
+            string
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>Numeric integer  in range <b>[0; ∞]</b></li></ul></div></td></tr><tr><td>?⁠offset</td> <td><span><span><!----> <span>
+            number
+        </span></span><span><span>⁠|​⁠</span> <span>
+            string
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>Numeric integer  in range <b>[0; ∞]</b></li></ul></div></td></tr><tr><td>?⁠sort</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span></span> <!----></td></tr> <!----></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> 
+            PagiatedResponse&lt;<a href="/entities/#entity-translation">Translation</a>[]&gt;
+        </span></span> <!----> <!----> <!----></div></div><div><hr> <div class="endpoint"><h3 id="get-reports"><a href="#get-reports" class="header-anchor">#</a>
+        Get reports
+    </h3> <div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/v2/reports</span></div></div> <p class="action-desc">Get a bunch of recent reports</p> <!----> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><!----> <tr class="params-table--group"><td colspan="3">
+                        Query parameters
+                    </td></tr> <tr><td>?⁠limit</td> <td><span><span><!----> <span>
+            number
+        </span></span><span><span>⁠|​⁠</span> <span>
+            string
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>Numeric integer  in range <b>[0; ∞]</b></li></ul></div></td></tr><tr><td>?⁠offset</td> <td><span><span><!----> <span>
+            number
+        </span></span><span><span>⁠|​⁠</span> <span>
+            string
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>Numeric integer  in range <b>[0; ∞]</b></li></ul></div></td></tr> <!----></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> 
+            PagiatedResponse&lt;<a href="/entities/#entity-report">Report</a>[]&gt;
+        </span></span> <!----> <!----> <!----></div></div><div><hr> <div class="endpoint"><h3 id="update-submission"><a href="#update-submission" class="header-anchor">#</a>
+        Update submission
+    </h3> <div class="method-container method-POST"><span class="method method-POST">POST</span> <div class="path-container"><span class="path">/v2/translations/:id</span></div></div> <p class="action-desc">Update sent submission. Will result in error if translation is already processed and user is not a moderator.</p> <!----> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr class="params-table--group"><td colspan="3">
+                        URL parameters
+                    </td></tr> <tr><td>:⁠id</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span>Submission id to be updated</span> <!----></td></tr> <!----> <tr class="params-table--group"><td colspan="3">
+                    Body is
+                    <span class="type-display--mono"><span><!----> 
+            <a href="/entities/#entity-translation">Translation</a>
+        </span></span></td></tr></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> 
+            <a href="/entities/#entity-translation">Translation</a>[]
+        </span></span> <!----> <h4>Throws</h4> <table><thead><tr><td><div style="min-width:160px">Error</div></td> <td>Description</td></tr></thead> <tbody><tr><td><code>NOT_FOUND</code></td> <td>Submission was not found</td></tr><tr><td><code>ALREADY_PROCESSED</code></td> <td>Submission was already processed</td></tr><tr><td><code>ACCESS_DENIED</code></td> <td>You can only update own submissions</td></tr></tbody></table> <!----></div></div><div><hr> <div class="endpoint"><h3 id="delete-a-report"><a href="#delete-a-report" class="header-anchor">#</a>
+        Delete a report
+    </h3> <div class="method-container method-DELETE"><span class="method method-DELETE">DELETE</span> <div class="path-container"><span class="path">/v2/reports/:id</span></div></div> <p class="action-desc">Delete sent report. Will result in error if report is already resolved.</p> <!----> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr class="params-table--group"><td colspan="3">
+                        URL parameters
+                    </td></tr> <tr><td>:⁠id</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span>Report id to be deleted</span> <!----></td></tr> <!----> <!----></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> <span>
+            &quot;OK&quot;
+        </span></span></span> <!----> <h4>Throws</h4> <table><thead><tr><td><div style="min-width:160px">Error</div></td> <td>Description</td></tr></thead> <tbody><tr><td><code>NOT_FOUND</code></td> <td>Report was not found</td></tr><tr><td><code>ALREADY_PROCESSED</code></td> <td>Report was already processed</td></tr><tr><td><code>ACCESS_DENIED</code></td> <td>You can only delete own reports</td></tr></tbody></table> <!----></div></div><div><hr> <div class="endpoint"><h3 id="re-open-a-report"><a href="#re-open-a-report" class="header-anchor">#</a>
+        Re-open a report
+    </h3> <div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/v2/reports/:id/reopen</span></div></div> <p class="action-desc">Re-open a report marked as resolved or discarded</p> <!----> <!----> <h4>Returns</h4> <span class="type-display--mono"><span><!----> <span>
+            &quot;OK&quot;
+        </span></span></span> <!----> <h4>Throws</h4> <table><thead><tr><td><div style="min-width:160px">Error</div></td> <td>Description</td></tr></thead> <tbody><tr><td><code>NOT_FOUND</code></td> <td>Report was not found</td></tr><tr><td><code>NOT_CLOSED</code></td> <td>Report is not closed yet, can't re-open</td></tr><tr><td><code>ACCESS_DENIED</code></td> <td>You can only re-open own reports (except for moderators)</td></tr><tr><td><code>BANNED</code></td> <td>You are banned and can not re-open reports</td></tr></tbody></table> <!----></div></div><div><hr> <div class="endpoint"><h3 id="delete-a-submission"><a href="#delete-a-submission" class="header-anchor">#</a>
+        Delete a submission
+    </h3> <div class="method-container method-DELETE"><span class="method method-DELETE">DELETE</span> <div class="path-container"><span class="path">/v2/translations/:id</span></div></div> <p class="action-desc">Delete sent submission. Will result in error if submission is already processed and user is not a moderator.</p> <!----> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr class="params-table--group"><td colspan="3">
+                        URL parameters
+                    </td></tr> <tr><td>:⁠id</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span>Submission id to be deleted</span> <!----></td></tr> <!----> <!----></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> <span>
+            &quot;OK&quot;
+        </span></span></span> <!----> <h4>Throws</h4> <table><thead><tr><td><div style="min-width:160px">Error</div></td> <td>Description</td></tr></thead> <tbody><tr><td><code>NOT_FOUND</code></td> <td>Report was not found</td></tr><tr><td><code>ALREADY_PROCESSED</code></td> <td>Report was already processed</td></tr><tr><td><code>ACCESS_DENIED</code></td> <td>You can only delete own reports</td></tr></tbody></table> <!----></div></div><div><hr> <div class="endpoint"><h3 id="get-decline-reason"><a href="#get-decline-reason" class="header-anchor">#</a>
+        Get decline reason
+    </h3> <div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/v2/translations/:id/declineReason</span></div></div> <p class="action-desc">In case a submission was declined, chances are that moderator set a reason of rejection.</p> <!----> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr class="params-table--group"><td colspan="3">
+                        URL parameters
+                    </td></tr> <tr><td>:⁠id</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span>Submission id to be deleted</span> <!----></td></tr> <!----> <!----></tbody></table> <!----> <h4>Throws</h4> <table><thead><tr><td><div style="min-width:160px">Error</div></td> <td>Description</td></tr></thead> <tbody><tr><td><code>NOT_FOUND</code></td> <td>Translation was not found</td></tr><tr><td><code>ACCESS_DENIED</code></td> <td>You can only get decline reason for own submissions</td></tr><tr><td><code>NOT_DECLINED</code></td> <td>This translation was not declined.</td></tr></tbody></table> <!----></div></div></div><div class="endpoint"><h2 id="internal"><a href="#internal" class="header-anchor">#</a>
+        Internal
+    </h2> <!----> <p class="group-desc">Endpoints which are intended for internal usage</p> <!----> <!----> <!----> <!----> <div><!----> <div class="endpoint"><h3 id="ping"><a href="#ping" class="header-anchor">#</a>
+        Ping
+    </h3> <div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/ping</span></div></div> <p class="action-desc">Ping!</p> <!----> <!----> <h4>Returns</h4> <span class="type-display--mono"><span><!----> <span>
+            &quot;Pong&quot;
+        </span></span></span> <!----> <!----> <!----></div></div><div><hr> <div class="endpoint"><h3 id="captcha"><a href="#captcha" class="header-anchor">#</a>
+        Captcha
+    </h3> <div class="method-container method-POST"><span class="method method-POST">POST</span> <div class="path-container"><span class="path">/internal/captcha</span></div></div> <p class="action-desc">Refresh user's last captcha time</p> <h4>Special features:</h4> <ul class="features"><li>Rate limiting at <b>5</b> requests every <b>60</b> seconds</li></ul> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><!----> <!----> <tr class="params-table--group"><td colspan="3">
+                        Body parameters (in JSON)
+                    </td></tr> <tr><td>token</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>Recaptcha token</span> <!----></td></tr></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> <span>
+            boolean
+        </span></span></span> <!----> <h4>Throws</h4> <table><thead><tr><td><div style="min-width:160px">Error</div></td> <td>Description</td></tr></thead> <tbody><tr><td><code>Captcha verification failed</code></td> <td>Thrown when invalid Recaptcha token passed</td></tr></tbody></table> <!----></div></div><div><hr> <div class="endpoint"><h3 id="external-batch-addition"><a href="#external-batch-addition" class="header-anchor">#</a>
+        External batch addition
+    </h3> <div class="method-container method-POST"><span class="method method-POST">POST</span> <div class="path-container"><span class="path">/batch/add/translations</span></div></div> <p class="action-desc">Batch addition for multiple translations at once as an external OAuth app. The only limit is bodyparser body limit (around 1mb), so with minification that's about 4k translations at once.<br />You can access extended number of parameters, including <code>groups</code><code>status</code>. Use status=pending to put items on pre-moderation, status=declined will be ignored.<br />Group <code>from-app:[your-app-id]</code> will always be added with your translations as a precaution.</p> <h4>Special features:</h4> <ul class="features"><li>Requires server scope: <code>batch:add:translation</code></li></ul> <!----> <!----> <h4>Throws</h4> <table><thead><tr><td><div style="min-width:160px">Error</div></td> <td>Description</td></tr></thead> <tbody><tr><td><code>ACCESS_DENIED</code></td> <td>You did not pass a valid OAuth client_secret or your app does not have sufficient permissions</td></tr><tr><td><code>INVALID_TOKEN</code></td> <td>Given Token does not match any OAuth app.</td></tr></tbody></table> <!----></div></div></div><div class="endpoint"><h2 id="mappings"><a href="#mappings" class="header-anchor">#</a>
+        Mappings
+    </h2> <!----> <p class="group-desc">Information about media ID mappings</p> <!----> <!----> <!----> <!----> <div><!----> <div class="endpoint"><h3 id="get-mapping"><a href="#get-mapping" class="header-anchor">#</a>
+        Get mapping
+    </h3> <div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/v2/mappings/:type</span></div></div> <p class="action-desc">Get a single media ID mapping. Query must contain 1 parameter in format: <code>?serviceName=serviceId</code></p> <!----> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr class="params-table--group"><td colspan="3">
+                        URL parameters
+                    </td></tr> <tr><td>:⁠type</td> <td><span><span><!----> <span>
+            &quot;anime&quot;
+        </span></span><span><span>⁠|​⁠</span> <span>
+            &quot;manga&quot;
+        </span></span></span></td> <td><span>Media type for mappings.</span> <!----></td></tr> <tr class="params-table--group"><td colspan="3">
+                        Query parameters
+                    </td></tr> <tr><td>?⁠%serviceName%</td> <td><span><span><!----> <span>
+            string
+        </span></span><span><span>⁠|​⁠</span> <span>
+            number
+        </span></span></span></td> <td><span>Media ID in given service</span> <!----></td></tr> <!----></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> 
+            <a href="/entities/#entity-mapping">Mapping</a>
+        </span><span><span>⁠|​⁠</span> <span>
+            null
+        </span></span></span> <p>Media mappings</p> <!----> <!----></div></div><div><hr> <div class="endpoint"><h3 id="extend-mappings"><a href="#extend-mappings" class="header-anchor">#</a>
+        Extend mappings
+    </h3> <div class="method-container method-POST"><span class="method method-POST">POST</span> <div class="path-container"><span class="path">/v2/mappings/extend/:type</span></div></div> <p class="action-desc"></p> <h4>Special features:</h4> <ul class="features"><li>Requires server scope: <code>mappings:extend</code></li></ul> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><!----> <tr class="params-table--group"><td colspan="3">
+                        Query parameters
+                    </td></tr> <tr><td>?⁠force</td> <td><span><span><!----> <span>
+            boolean
+        </span></span></span></td> <td><span>Whether to ignore conflicts</span> <!----></td></tr> <tr class="params-table--group"><td colspan="3">
+                    Body is
+                    <span class="type-display--mono"><span><!----> 
+            <a href="/entities/#entity-externalservicemappings">ExternalServiceMappings</a>
+        </span></span></td></tr></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> 
+            <a href="/entities/#entity-mapping">Mapping</a>
+        </span></span> <!----> <h4>Throws</h4> <table><thead><tr><td><div style="min-width:160px">Error</div></td> <td>Description</td></tr></thead> <tbody><tr><td><code>ACCESS_DENIED</code></td> <td>You did not pass a valid OAuth client_secret or your app does not have sufficient permissions</td></tr><tr><td><code>INVALID_TOKEN</code></td> <td>Given Token does not match any OAuth app.</td></tr><tr><td><code>CONFLICTING_MAPPING</code></td> <td>There's a conflict when merging mappings.</td></tr></tbody></table> <!----></div></div></div><div class="endpoint"><h2 id="moderation"><a href="#moderation" class="header-anchor">#</a>
+        Moderation
+    </h2> <!----> <p class="group-desc">Moderation-related endpoints</p> <h4>Special features:</h4> <ul class="features"><li>Requires auth</li><li>Requires <code>moderator = true</code> on current user</li></ul> <!----> <!----> <h4>Throws</h4> <table><thead><tr><td><div style="min-width:160px">Error</div></td> <td>Description</td></tr></thead> <tbody><tr><td><code>NO_AUTH</code></td> <td>Not logged in</td></tr><tr><td><code>ACCESS_DENIED</code></td> <td>Flag not set</td></tr></tbody></table> <div><!----> <div class="endpoint"><h3 id="recent-submissions-reports"><a href="#recent-submissions-reports" class="header-anchor">#</a>
+        Recent submissions/reports
+    </h3> <div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/v2/:type/recent</span></div></div> <p class="action-desc">Get a bunch of recent submissions/translations</p> <!----> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr class="params-table--group"><td colspan="3">
+                        URL parameters
+                    </td></tr> <tr><td>:⁠type</td> <td><span><span><!----> <span>
+            &quot;submissions&quot;
+        </span></span><span><span>⁠|​⁠</span> <span>
+            &quot;reports&quot;
+        </span></span></span></td> <td><span>Type of items to return</span> <!----></td></tr> <tr class="params-table--group"><td colspan="3">
+                        Query parameters
+                    </td></tr> <tr><td>?⁠limit</td> <td><span><span><!----> <span>
+            number
+        </span></span><span><span>⁠|​⁠</span> <span>
+            string
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>Numeric integer  in range <b>[0; ∞]</b></li></ul></div></td></tr><tr><td>?⁠offset</td> <td><span><span><!----> <span>
+            number
+        </span></span><span><span>⁠|​⁠</span> <span>
+            string
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>Numeric integer  in range <b>[0; ∞]</b></li></ul></div></td></tr><tr><td>?⁠all</td> <td><span><span><!----> <span>
+            boolean
+        </span></span></span></td> <td><span>Whether to return all submissions/reports and not only most recent (will remove date filtering, does not affect pagination)</span> <!----></td></tr><tr><td>?⁠complex</td> <td><span><span><!----> <span>
+            boolean
+        </span></span></span></td> <td><span>If passed, will only return complex (if true) or non-complex (if false) reports. If omitted, all reports are returned. Only used when <code>:type=reports</code></span> <!----></td></tr> <!----></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> 
+            PagiatedResponse&lt;<a href="/entities/#entity-translation">Translation</a>[]&gt;
+        </span><span><span>⁠|​⁠</span> 
+            PagiatedResponse&lt;<a href="/entities/#entity-report">Report</a>[]&gt;
+        </span></span> <p>Depending on <code>type</code> will return different items.</p> <!----> <!----></div></div><div><hr> <div class="endpoint"><h3 id="process-a-submission"><a href="#process-a-submission" class="header-anchor">#</a>
+        Process a submission
+    </h3> <div class="method-container method-POST"><span class="method method-POST">POST</span> <div class="path-container"><span class="path">/v2/submissions/:id/:action</span></div></div> <p class="action-desc">Accepts or declines a single submission</p> <!----> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr class="params-table--group"><td colspan="3">
+                        URL parameters
+                    </td></tr> <tr><td>:⁠id</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span>Submission ID</span> <!----></td></tr><tr><td>:⁠action</td> <td><span><span><!----> <span>
+            &quot;accept&quot;
+        </span></span><span><span>⁠|​⁠</span> <span>
+            &quot;decline&quot;
+        </span></span></span></td> <td><span>Action</span> <!----></td></tr> <tr class="params-table--group"><td colspan="3">
+                        Query parameters
+                    </td></tr> <tr><td>?⁠reason</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>In case <code>action</code> is <code>decline</code> - decline reason. Optional.</span> <!----></td></tr> <tr class="params-table--group"><td colspan="3">
+                    Body is
+                    <span class="type-display--mono"><span><!----> 
+            <a href="/entities/#entity-translation">Translation</a>
+        </span></span></td></tr></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> 
+            <a href="/entities/#entity-translation">Translation</a>
+        </span></span> <p>Updated translation</p> <h4>Throws</h4> <table><thead><tr><td><div style="min-width:160px">Error</div></td> <td>Description</td></tr></thead> <tbody><tr><td><code>TRANSLATION_DUPLICATE_N</code></td> <td>Given translation is a duplicate of translation with id N. It may be in <code>pending</code> state. Duplicates are detected by perfect url match</td></tr><tr><td><code>NOT_FOUND</code></td> <td>Translation was not found</td></tr></tbody></table> <!----></div></div><div><hr> <div class="endpoint"><h3 id="get-report"><a href="#get-report" class="header-anchor">#</a>
+        Get report
+    </h3> <div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/v2/reports/:id</span></div></div> <p class="action-desc">Get a single report</p> <!----> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr class="params-table--group"><td colspan="3">
+                        URL parameters
+                    </td></tr> <tr><td>:⁠id</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span>Report ID</span> <!----></td></tr> <!----> <!----></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> 
+            <a href="/entities/#entity-report">Report</a>
+        </span><span><span>⁠|​⁠</span> <span>
+            null
+        </span></span></span> <p>Requested report or null if it does not exist</p> <!----> <!----></div></div><div><hr> <div class="endpoint"><h3 id="process-a-report"><a href="#process-a-report" class="header-anchor">#</a>
+        Process a report
+    </h3> <div class="method-container method-POST"><span class="method method-POST">POST</span> <div class="path-container"><span class="path">/v2/reports/:id/:action</span></div></div> <p class="action-desc">Resolve a single report</p> <!----> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr class="params-table--group"><td colspan="3">
+                        URL parameters
+                    </td></tr> <tr><td>:⁠id</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span>Submission ID</span> <!----></td></tr><tr><td>:⁠action</td> <td><span><span><!----> <span>
+            &quot;discard&quot;
+        </span></span><span><span>⁠|​⁠</span> <span>
+            &quot;resolve&quot;
+        </span></span><span><span>⁠|​⁠</span> <span>
+            &quot;delete&quot;
+        </span></span></span></td> <td><span>Action. If <code>discard</code> then report will me marked as discarded and nothing will happen. If <code>delete</code> then report will be marked as resolved and corresponding translation will be deleted. If <code>resolve</code> then report will be marked as resolved and corresponding translation will be updated from body.</span> <!----></td></tr> <!----> <tr class="params-table--group"><td colspan="3">
+                    Body is
+                    <span class="type-display--mono"><span><!----> 
+            <a href="/entities/#entity-translation">Translation</a>
+        </span></span></td></tr></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> <span>
+            boolean
+        </span></span></span> <!----> <h4>Throws</h4> <table><thead><tr><td><div style="min-width:160px">Error</div></td> <td>Description</td></tr></thead> <tbody><tr><td><code>TRANSLATION_DUPLICATE_N</code></td> <td>Given translation is a duplicate of translation with id N. It may be in <code>pending</code> state. Duplicates are detected by perfect url match</td></tr><tr><td><code>ALREADY_PROCESSED</code></td> <td>Report was already processed</td></tr></tbody></table> <!----></div></div><div><hr> <div class="endpoint"><h3 id="make-report-complex"><a href="#make-report-complex" class="header-anchor">#</a>
+        Make report complex
+    </h3> <div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/v2/reports/:id/makeComplex</span></div></div> <p class="action-desc">Make a report complex. Note that this action is irreversible!</p> <!----> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr class="params-table--group"><td colspan="3">
+                        URL parameters
+                    </td></tr> <tr><td>:⁠id</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span>Report ID</span> <!----></td></tr> <!----> <!----></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> <span>
+            &quot;OK&quot;
+        </span></span></span> <!----> <h4>Throws</h4> <table><thead><tr><td><div style="min-width:160px">Error</div></td> <td>Description</td></tr></thead> <tbody><tr><td><code>NOT_FOUND</code></td> <td>Report was not found</td></tr><tr><td><code>TR_NOT_FOUND</code></td> <td>Report is bound to a translation which does not exist</td></tr><tr><td><code>ALREADY_COMPLEX</code></td> <td>Report is already complex</td></tr></tbody></table> <!----></div></div><div><hr> <div class="endpoint"><h3 id="batch-update-translations"><a href="#batch-update-translations" class="header-anchor">#</a>
+        Batch update translations
+    </h3> <div class="method-container method-PATCH"><span class="method method-PATCH">PATCH</span> <div class="path-container"><span class="path">/v2/translations</span></div></div> <p class="action-desc">Update multiple translations' fields at once. Note that URLs and groups can't be changed here. Status can be changed, however, to batch hide translations without deleting them</p> <!----> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><!----> <tr class="params-table--group"><td colspan="3">
+                        Query parameters
+                    </td></tr> <tr><td>?⁠ids</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span>Comma-separated list of translation ids</span> <!----></td></tr><tr><td>?⁠groups</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>Comma-separated list of translation groups</span> <!----></td></tr> <!----></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> <span>
+            object
+        </span></span></span> <!----> <!----> <!----></div></div><div><hr> <div class="endpoint"><h3 id="get-translations-in-group"><a href="#get-translations-in-group" class="header-anchor">#</a>
+        Get translations in group
+    </h3> <div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/v2/translations/inGroup/:group</span></div></div> <p class="action-desc">Returns all translations that belong to a given group</p> <!----> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr class="params-table--group"><td colspan="3">
+                        URL parameters
+                    </td></tr> <tr><td>:⁠group</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>Group from which to receive translations.</span> <!----></td></tr> <tr class="params-table--group"><td colspan="3">
+                        Query parameters
+                    </td></tr> <tr><td>?⁠limit</td> <td><span><span><!----> <span>
+            number
+        </span></span><span><span>⁠|​⁠</span> <span>
+            string
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>Numeric integer  in range <b>[0; ∞]</b></li></ul></div></td></tr><tr><td>?⁠offset</td> <td><span><span><!----> <span>
+            number
+        </span></span><span><span>⁠|​⁠</span> <span>
+            string
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>Numeric integer  in range <b>[0; ∞]</b></li></ul></div></td></tr><tr><td>?⁠sort</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span></span> <!----></td></tr> <!----></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> 
+            PagiatedResponse&lt;<a href="/entities/#entity-translation">Translation</a>&gt;
+        </span></span> <!----> <!----> <!----></div></div><div><hr> <div class="endpoint"><h3 id="get-player-meta-information"><a href="#get-player-meta-information" class="header-anchor">#</a>
+        Get player meta information
+    </h3> <div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/v2/translations/:id/playerMeta</span></div></div> <p class="action-desc">Returns player meta information like title & page with player from some websites</p> <!----> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr class="params-table--group"><td colspan="3">
+                        URL parameters
+                    </td></tr> <tr><td>:⁠id</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span>Translation ID</span> <!----></td></tr> <!----> <!----></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> 
+            <a href="/entities/#entity-playermeta">PlayerMeta</a>
+        </span></span> <!----> <h4>Throws</h4> <table><thead><tr><td><div style="min-width:160px">Error</div></td> <td>Description</td></tr></thead> <tbody><tr><td><code>NOT_FOUND</code></td> <td>Translation was not found</td></tr></tbody></table> <!----></div></div><div><hr> <div class="endpoint"><h3 id="batch-delete-translations"><a href="#batch-delete-translations" class="header-anchor">#</a>
+        Batch delete translations
+    </h3> <div class="method-container method-DELETE"><span class="method method-DELETE">DELETE</span> <div class="path-container"><span class="path">/v2/translations</span></div></div> <p class="action-desc">Delete multiple translations at once</p> <!----> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><!----> <tr class="params-table--group"><td colspan="3">
+                        Query parameters
+                    </td></tr> <tr><td>?⁠ids</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span>Comma-separated list of translation ids</span> <!----></td></tr><tr><td>?⁠groups</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>Comma-separated list of translation groups</span> <!----></td></tr> <!----></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> <span>
+            object
+        </span></span></span> <!----> <!----> <!----></div></div><div><hr> <div class="endpoint"><h3 id="get-moderation-statistics"><a href="#get-moderation-statistics" class="header-anchor">#</a>
+        Get moderation statistics
+    </h3> <div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/v2/moderation/statistics</span></div></div> <p class="action-desc">Get number of accepted/declined translations and processed reports</p> <!----> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><!----> <tr class="params-table--group"><td colspan="3">
+                        Query parameters
+                    </td></tr> <tr><td>?⁠id</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span>User id to get statistics for. By default is current user. Usage requires Admin.</span> <!----></td></tr> <!----></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> <span>
+            object
+        </span></span></span> <p>Object with fields: <code>accepted, declined, reports</code>, each maps to a single number.</p> <!----> <!----></div></div></div><div class="endpoint"><h2 id="notifications"><a href="#notifications" class="header-anchor">#</a>
+        Notifications
+    </h2> <!----> <p class="group-desc">Notification-related endpoints</p> <!----> <!----> <!----> <!----> <div><!----> <div class="endpoint"><h3 id="subscribe"><a href="#subscribe" class="header-anchor">#</a>
+        Subscribe
+    </h3> <div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/v2/notifications/subscribe</span></div></div> <p class="action-desc">Subscribes current user to a list of given topics</p> <h4>Special features:</h4> <ul class="features"><li>Requires auth</li></ul> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><!----> <tr class="params-table--group"><td colspan="3">
+                        Query parameters
+                    </td></tr> <tr><td>?⁠topics</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>Comma-delimited list of topics to subscribe to. Topics are case-insensitive.</span> <!----></td></tr> <!----></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> <span>
+            string
+        </span></span></span> <p>List of topics that user is currently subscribed to</p> <h4>Throws</h4> <table><thead><tr><td><div style="min-width:160px">Error</div></td> <td>Description</td></tr></thead> <tbody><tr><td><code>NO_AUTH</code></td> <td>Not logged in</td></tr></tbody></table> <!----></div></div><div><hr> <div class="endpoint"><h3 id="unsubscribe"><a href="#unsubscribe" class="header-anchor">#</a>
+        Unsubscribe
+    </h3> <div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/v2/notifications/unsubscribe</span></div></div> <p class="action-desc">Unsubscribes current user from a list of given topics</p> <h4>Special features:</h4> <ul class="features"><li>Requires auth</li></ul> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><!----> <tr class="params-table--group"><td colspan="3">
+                        Query parameters
+                    </td></tr> <tr><td>?⁠topics</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>Comma-delimited list of topics to unsubscribe form. Topics are case-insensitive.</span> <!----></td></tr> <!----></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> <span>
+            string
+        </span></span></span> <p>List of topics that user is currently subscribed to</p> <h4>Throws</h4> <table><thead><tr><td><div style="min-width:160px">Error</div></td> <td>Description</td></tr></thead> <tbody><tr><td><code>NO_AUTH</code></td> <td>Not logged in</td></tr></tbody></table> <!----></div></div><div><hr> <div class="endpoint"><h3 id="get-topics"><a href="#get-topics" class="header-anchor">#</a>
+        Get topics
+    </h3> <div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/v2/notifications/mytopics</span></div></div> <p class="action-desc">Get current user's subscriptions</p> <h4>Special features:</h4> <ul class="features"><li>Requires auth</li></ul> <!----> <h4>Returns</h4> <span class="type-display--mono"><span><!----> <span>
+            string
+        </span></span></span> <p>List of topics that user is currently subscribed to</p> <h4>Throws</h4> <table><thead><tr><td><div style="min-width:160px">Error</div></td> <td>Description</td></tr></thead> <tbody><tr><td><code>NO_AUTH</code></td> <td>Not logged in</td></tr></tbody></table> <!----></div></div><div><hr> <div class="endpoint"><h3 id="missed-notifications"><a href="#missed-notifications" class="header-anchor">#</a>
+        Missed notifications
+    </h3> <div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/v2/notifications/missed</span></div></div> <p class="action-desc">Get missed notifications. Note that notifications are stored server-side for 60 days</p> <h4>Special features:</h4> <ul class="features"><li>Requires auth</li></ul> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><!----> <tr class="params-table--group"><td colspan="3">
+                        Query parameters
+                    </td></tr> <tr><td>?⁠since</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span>Unix timestamp of last synchronization</span> <!----></td></tr> <!----></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> 
+            <a href="/entities/#entity-notification">Notification</a>[]
+        </span></span> <p>List of topics that user is currently subscribed to</p> <h4>Throws</h4> <table><thead><tr><td><div style="min-width:160px">Error</div></td> <td>Description</td></tr></thead> <tbody><tr><td><code>NO_AUTH</code></td> <td>Not logged in</td></tr></tbody></table> <!----></div></div><div><hr> <div class="endpoint"><h3 id="add-firebase-token"><a href="#add-firebase-token" class="header-anchor">#</a>
+        Add Firebase token
+    </h3> <div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/v2/notifications/addFirebaseToken</span></div></div> <p class="action-desc">Adds a Firebase token to current user, which will be used to notify user while he is offline.</p> <h4>Special features:</h4> <ul class="features"><li>Requires auth</li></ul> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><!----> <tr class="params-table--group"><td colspan="3">
+                        Query parameters
+                    </td></tr> <tr><td>?⁠token</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>Firebase token</span> <!----></td></tr> <!----></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> <span>
+            &quot;OK&quot;
+        </span></span></span> <!----> <h4>Throws</h4> <table><thead><tr><td><div style="min-width:160px">Error</div></td> <td>Description</td></tr></thead> <tbody><tr><td><code>NO_AUTH</code></td> <td>Not logged in</td></tr><tr><td><code>INVALID_FIREBASE_TOKEN</code></td> <td>Given Firebase token is invalid</td></tr></tbody></table> <!----></div></div><div><hr> <div class="endpoint"><h3 id="remove-firebase-token"><a href="#remove-firebase-token" class="header-anchor">#</a>
+        Remove Firebase token
+    </h3> <div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/v2/notifications/removeFirebaseToken</span></div></div> <p class="action-desc">Removes a Firebase token from database. Does not require auth.</p> <!----> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><!----> <tr class="params-table--group"><td colspan="3">
+                        Query parameters
+                    </td></tr> <tr><td>?⁠token</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>Firebase token</span> <!----></td></tr> <!----></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> <span>
+            &quot;OK&quot;
+        </span></span></span> <!----> <!----> <!----></div></div><div><hr> <div class="endpoint"><h3 id="mark-notifications-as-seen"><a href="#mark-notifications-as-seen" class="header-anchor">#</a>
+        Mark notifications as seen
+    </h3> <div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/v2/notifications/markAsSeen</span></div></div> <p class="action-desc">Mark notifications with given IDs as seen. When implementing on client-side, since users usually read many notifications at once, it is best to debounce the events and call this method with multiple IDs</p> <h4>Special features:</h4> <ul class="features"><li>Requires auth</li></ul> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><!----> <tr class="params-table--group"><td colspan="3">
+                        Query parameters
+                    </td></tr> <tr><td>?⁠ids</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span>IDs of notifications to mark as read, delimited with a comma.</span> <!----></td></tr> <!----></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> <span>
+            &quot;OK&quot;
+        </span></span></span> <!----> <h4>Throws</h4> <table><thead><tr><td><div style="min-width:160px">Error</div></td> <td>Description</td></tr></thead> <tbody><tr><td><code>NO_AUTH</code></td> <td>Not logged in</td></tr></tbody></table> <!----></div></div></div><div class="endpoint"><h2 id="oauth"><a href="#oauth" class="header-anchor">#</a>
+        OAuth
+    </h2> <!----> <p class="group-desc">Not exactly OAuth, we have much more simple and straightforward flow similar to OAuth, so let's call it OAuth. More in OAuth section</p> <!----> <!----> <!----> <!----> <div><!----> <div class="endpoint"><h3 id="start-implicit-flow"><a href="#start-implicit-flow" class="header-anchor">#</a>
+        Start implicit flow
+    </h3> <div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/v2/oauth/authorize</span></div></div> <p class="action-desc">This endpoint returns a plain HTML page containing form where user will accept or decline grant.</p> <h4>Special features:</h4> <ul class="features"><li>Raw (HTML) response</li><li>Requires auth via cookie</li></ul> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr class="params-table--group"><td colspan="3">
+                        URL parameters
+                    </td></tr> <tr><td>:⁠client_id</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>Client ID to which the token should be issued.</span> <!----></td></tr> <!----> <!----></tbody></table> <!----> <h4>Throws</h4> <table><thead><tr><td><div style="min-width:160px">Error</div></td> <td>Description</td></tr></thead> <tbody><tr><td><code>NO_OAUTH</code></td> <td>Trying to use not OAuth API with OAuth-based auth</td></tr><tr><td><code>NO_SUCH_APP</code></td> <td>Provided client_id string is not associated with any app</td></tr></tbody></table> <!----></div></div></div><div class="endpoint"><h2 id="parsers"><a href="#parsers" class="header-anchor">#</a>
+        Parsers
+    </h2> <!----> <p class="group-desc">Advanced low-level and high-trusted endpoints that interact directly with server internal entities called <a href="/entities/#enitity-parser">Parsers</a>. All of these require a specific <a href="/#protected-resources">server scope</a>. </p> <!----> <!----> <!----> <!----> <div><!----> <div class="endpoint"><h3 id="run-a-parser"><a href="#run-a-parser" class="header-anchor">#</a>
+        Run a Parser
+    </h3> <div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/v2/parsers/run/:uid</span></div></div> <p class="action-desc">Run a parser using given parameters. Requires <code>parsers:run:$UID</code> server scope, where <code>$UID</code> is a parser UID for non-public parsers. Note that result of a parser will not be interpreted internally. So, Importers will either return <code>{}</code> (in case of a generator) or array of items, and they WILL NOT be actually imported</p> <h4>Special features:</h4> <ul class="features"><li>Requires server scope: <code>parsers:run:$UID</code></li></ul> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr class="params-table--group"><td colspan="3">
+                        URL parameters
+                    </td></tr> <tr><td>:⁠uid</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>UID of a Parser</span> <!----></td></tr> <tr class="params-table--group"><td colspan="3">
+                        Query parameters
+                    </td></tr> <tr><td>?⁠$key</td> <td><span><span><!----> <span>
+            any
+        </span></span></span></td> <td><span>All query parameters will be passed as-is to the Parser</span> <!----></td></tr> <!----></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> <span>
+            any
+        </span></span></span> <p>A parser can contain anything, so return type is unknown</p> <h4>Throws</h4> <table><thead><tr><td><div style="min-width:160px">Error</div></td> <td>Description</td></tr></thead> <tbody><tr><td><code>NOT_FOUND</code></td> <td>Parser was not found</td></tr></tbody></table> <!----></div></div><div><hr> <div class="endpoint"><h3 id="pull-parsers"><a href="#pull-parsers" class="header-anchor">#</a>
+        Pull parsers
+    </h3> <div class="method-container method-POST"><span class="method method-POST">POST</span> <div class="path-container"><span class="path">/v2/parsers/pull</span></div></div> <p class="action-desc">Get parsers difference since last pull.</p> <h4>Special features:</h4> <ul class="features"><li>Requires server scope: <code>parsers:pull</code></li></ul> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><!----> <!----> <tr class="params-table--group"><td colspan="3">
+                    Body is
+                    <span class="type-display--mono"><span><!----> 
+            <a href="/entities/#entity-parserspullbody">ParsersPullBody</a>
+        </span></span></td></tr></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> 
+            <a href="/entities/#entity-parser">Parser</a>[]
+        </span></span> <!----> <h4>Throws</h4> <table><thead><tr><td><div style="min-width:160px">Error</div></td> <td>Description</td></tr></thead> <tbody><tr><td><code>ACCESS_DENIED</code></td> <td>You did not pass a valid OAuth client_secret or your app does not have sufficient permissions</td></tr><tr><td><code>INVALID_TOKEN</code></td> <td>Given Token does not match any OAuth app.</td></tr></tbody></table> <!----></div></div><div><hr> <div class="endpoint"><h3 id="push-parsers"><a href="#push-parsers" class="header-anchor">#</a>
+        Push parsers
+    </h3> <div class="method-container method-POST"><span class="method method-POST">POST</span> <div class="path-container"><span class="path">/v2/parsers/push</span></div></div> <p class="action-desc">Update parsers on server. Note that client should do caching and push only parsers that were actually changed. Not like its required, but it'll probably greatly reduce server load</p> <h4>Special features:</h4> <ul class="features"><li>Requires server scope: <code>parsers:push</code></li></ul> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><!----> <!----> <tr class="params-table--group"><td colspan="3">
+                    Body is
+                    <span class="type-display--mono"><span><!----> 
+            <a href="/entities/#entity-parserspushbody">ParsersPushBody</a>
+        </span></span></td></tr></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> <span>
+            &quot;OK&quot;
+        </span></span></span> <!----> <h4>Throws</h4> <table><thead><tr><td><div style="min-width:160px">Error</div></td> <td>Description</td></tr></thead> <tbody><tr><td><code>ACCESS_DENIED</code></td> <td>You did not pass a valid OAuth client_secret or your app does not have sufficient permissions</td></tr><tr><td><code>INVALID_TOKEN</code></td> <td>Given Token does not match any OAuth app.</td></tr></tbody></table> <!----></div></div><div><hr> <div class="endpoint"><h3 id="get-parsers-state"><a href="#get-parsers-state" class="header-anchor">#</a>
+        Get parsers state
+    </h3> <div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/v2/parsers/state</span></div></div> <p class="action-desc">Get current parsers runtime state</p> <h4>Special features:</h4> <ul class="features"><li>Requires auth</li><li>Requires <code>admin = true</code> on current user</li></ul> <!----> <h4>Returns</h4> <span class="type-display--mono"><span><!----> 
+            <a href="/entities/#entity-parsersstate">ParsersState</a>
+        </span><span><span>⁠|​⁠</span> <span>
+            null
+        </span></span></span> <p>Parsers state or <code>null</code> if parsers did not start since server restart</p> <h4>Throws</h4> <table><thead><tr><td><div style="min-width:160px">Error</div></td> <td>Description</td></tr></thead> <tbody><tr><td><code>NO_AUTH</code></td> <td>Not logged in</td></tr><tr><td><code>ACCESS_DENIED</code></td> <td>Flag not set</td></tr></tbody></table> <!----></div></div><div><hr> <div class="endpoint"><h3 id="start-parsers"><a href="#start-parsers" class="header-anchor">#</a>
+        Start parsers
+    </h3> <div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/v2/parsers/start</span></div></div> <p class="action-desc">Manually start parsers</p> <h4>Special features:</h4> <ul class="features"><li>Requires auth</li><li>Requires <code>admin = true</code> on current user</li></ul> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><!----> <tr class="params-table--group"><td colspan="3">
+                        Query parameters
+                    </td></tr> <tr><td>?⁠kind</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>Kind of parsers to run (mappers/cleaners/importers)</span> <!----></td></tr><tr><td>?⁠only</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>(optional) List of Parsers' UIDs to run. Only parsers of a selected <code>kind</code> will be started</span> <!----></td></tr> <!----></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> 
+            <a href="/entities/#entity-parsersstate">ParsersState</a>
+        </span><span><span>⁠|​⁠</span> <span>
+            null
+        </span></span></span> <p>Parsers state or <code>null</code> if parsers did not start since server restart</p> <h4>Throws</h4> <table><thead><tr><td><div style="min-width:160px">Error</div></td> <td>Description</td></tr></thead> <tbody><tr><td><code>NO_AUTH</code></td> <td>Not logged in</td></tr><tr><td><code>ACCESS_DENIED</code></td> <td>Flag not set</td></tr></tbody></table> <!----></div></div><div><hr> <div class="endpoint"><h3 id="list-parsers"><a href="#list-parsers" class="header-anchor">#</a>
+        List parsers
+    </h3> <div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/v2/parsers/list</span></div></div> <p class="action-desc">Get list of parsers</p> <h4>Special features:</h4> <ul class="features"><li>Requires auth</li><li>Requires <code>admin = true</code> on current user</li></ul> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><!----> <tr class="params-table--group"><td colspan="3">
+                        Query parameters
+                    </td></tr> <tr><td>?⁠limit</td> <td><span><span><!----> <span>
+            number
+        </span></span><span><span>⁠|​⁠</span> <span>
+            string
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>Numeric integer  in range <b>[0; ∞]</b></li></ul></div></td></tr><tr><td>?⁠offset</td> <td><span><span><!----> <span>
+            number
+        </span></span><span><span>⁠|​⁠</span> <span>
+            string
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>Numeric integer  in range <b>[0; ∞]</b></li></ul></div></td></tr><tr><td>?⁠sort</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>?⁠search</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>Search by UID. Supports star patterns (ex. <code>importers/*</code>)</span> <!----></td></tr> <!----></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> 
+            <a href="/entities/#entity-parser">Parser</a>[]
+        </span></span> <!----> <h4>Throws</h4> <table><thead><tr><td><div style="min-width:160px">Error</div></td> <td>Description</td></tr></thead> <tbody><tr><td><code>NO_AUTH</code></td> <td>Not logged in</td></tr><tr><td><code>ACCESS_DENIED</code></td> <td>Flag not set</td></tr></tbody></table> <!----></div></div><div><hr> <div class="endpoint"><h3 id="toggle-parsers"><a href="#toggle-parsers" class="header-anchor">#</a>
+        Toggle parsers
+    </h3> <div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/v2/parsers/:action</span></div></div> <p class="action-desc">Enable or disable parsers</p> <h4>Special features:</h4> <ul class="features"><li>Requires auth</li><li>Requires <code>admin = true</code> on current user</li></ul> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr class="params-table--group"><td colspan="3">
+                        URL parameters
+                    </td></tr> <tr><td>:⁠action</td> <td><span><span><!----> <span>
+            &quot;enable&quot;
+        </span></span><span><span>⁠|​⁠</span> <span>
+            &quot;disable&quot;
+        </span></span></span></td> <td><span>Whether to enable or disable given parsers</span> <!----></td></tr> <tr class="params-table--group"><td colspan="3">
+                        Query parameters
+                    </td></tr> <tr><td>?⁠uids</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>Comma-separated list of parsers to enable or disable</span> <!----></td></tr> <!----></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> <span>
+            &quot;OK&quot;
+        </span></span></span> <!----> <h4>Throws</h4> <table><thead><tr><td><div style="min-width:160px">Error</div></td> <td>Description</td></tr></thead> <tbody><tr><td><code>NO_AUTH</code></td> <td>Not logged in</td></tr><tr><td><code>ACCESS_DENIED</code></td> <td>Flag not set</td></tr></tbody></table> <!----></div></div><div><hr> <div class="endpoint"><h3 id="parser-storage"><a href="#parser-storage" class="header-anchor">#</a>
+        Parser storage
+    </h3> <div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/v2/parsers/storage</span></div></div> <p class="action-desc">Get internal storage of a single parser or global key-value storage</p> <h4>Special features:</h4> <ul class="features"><li>Requires auth</li><li>Requires <code>admin = true</code> on current user</li></ul> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><!----> <tr class="params-table--group"><td colspan="3">
+                        Query parameters
+                    </td></tr> <tr><td>?⁠limit</td> <td><span><span><!----> <span>
+            number
+        </span></span><span><span>⁠|​⁠</span> <span>
+            string
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>Numeric integer  in range <b>[0; ∞]</b></li></ul></div></td></tr><tr><td>?⁠offset</td> <td><span><span><!----> <span>
+            number
+        </span></span><span><span>⁠|​⁠</span> <span>
+            string
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>Numeric integer  in range <b>[0; ∞]</b></li></ul></div></td></tr><tr><td>?⁠sort</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span></span> <!----></td></tr><tr><td>?⁠uid</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>UID of a parser for which to request storage. If missing, entire storage will be available</span> <!----></td></tr><tr><td>?⁠search</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>Search by key. Supports SQL-like patterns (ex. <code>name:%</code>)</span> <!----></td></tr> <!----></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> 
+            <a href="/entities/#entity-keyvalue">KeyValue</a>[]
+        </span></span> <!----> <h4>Throws</h4> <table><thead><tr><td><div style="min-width:160px">Error</div></td> <td>Description</td></tr></thead> <tbody><tr><td><code>NO_AUTH</code></td> <td>Not logged in</td></tr><tr><td><code>ACCESS_DENIED</code></td> <td>Flag not set</td></tr><tr><td><code>NOT_FOUND</code></td> <td>Parser with a given UID was not found</td></tr></tbody></table> <!----></div></div><div><hr> <div class="endpoint"><h3 id="modify-parser-storage"><a href="#modify-parser-storage" class="header-anchor">#</a>
+        Modify parser storage
+    </h3> <div class="method-container method-POST"><span class="method method-POST">POST</span> <div class="path-container"><span class="path">/v2/parsers/storage</span></div></div> <p class="action-desc">Modify internal parsers' storage</p> <h4>Special features:</h4> <ul class="features"><li>Requires auth</li><li>Requires <code>admin = true</code> on current user</li></ul> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><!----> <tr class="params-table--group"><td colspan="3">
+                        Query parameters
+                    </td></tr> <tr><td>?⁠key</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span></span> <!----></td></tr> <tr class="params-table--group"><td colspan="3">
+                    Body is
+                    <span class="type-display--mono"><span><!----> <span>
+            any
+        </span></span></span></td></tr></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> <span>
+            &quot;OK&quot;
+        </span></span></span> <!----> <h4>Throws</h4> <table><thead><tr><td><div style="min-width:160px">Error</div></td> <td>Description</td></tr></thead> <tbody><tr><td><code>NO_AUTH</code></td> <td>Not logged in</td></tr><tr><td><code>ACCESS_DENIED</code></td> <td>Flag not set</td></tr></tbody></table> <!----></div></div><div><hr> <div class="endpoint"><h3 id="remove-from-parser-storage"><a href="#remove-from-parser-storage" class="header-anchor">#</a>
+        Remove from parser storage
+    </h3> <div class="method-container method-DELETE"><span class="method method-DELETE">DELETE</span> <div class="path-container"><span class="path">/v2/parsers/storage</span></div></div> <p class="action-desc">Remove items from internal parsers' storage</p> <h4>Special features:</h4> <ul class="features"><li>Requires auth</li><li>Requires <code>admin = true</code> on current user</li></ul> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><!----> <tr class="params-table--group"><td colspan="3">
+                        Query parameters
+                    </td></tr> <tr><td>?⁠key</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span></span> <!----></td></tr> <!----></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> <span>
+            &quot;OK&quot;
+        </span></span></span> <!----> <h4>Throws</h4> <table><thead><tr><td><div style="min-width:160px">Error</div></td> <td>Description</td></tr></thead> <tbody><tr><td><code>NO_AUTH</code></td> <td>Not logged in</td></tr><tr><td><code>ACCESS_DENIED</code></td> <td>Flag not set</td></tr></tbody></table> <!----></div></div></div><div class="endpoint"><h2 id="translations"><a href="#translations" class="header-anchor">#</a>
+        Translations
+    </h2> <!----> <p class="group-desc">Fetch information about currently available translations</p> <!----> <!----> <!----> <!----> <div><!----> <div class="endpoint"><h3 id="get-media-translations"><a href="#get-media-translations" class="header-anchor">#</a>
+        Get media translations
+    </h3> <div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/v2/translations/:type/:id/parts/:part</span></div></div><div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/v2/translations/:type/:id</span></div></div> <p class="action-desc">Get media translations by media ID, type and optionally part number.</p> <!----> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr class="params-table--group"><td colspan="3">
+                        URL parameters
+                    </td></tr> <tr><td>:⁠type</td> <td><span><span><!----> <span>
+            &quot;anime&quot;
+        </span></span><span><span>⁠|​⁠</span> <span>
+            &quot;manga&quot;
+        </span></span></span></td> <td><span>Media type</span> <!----></td></tr><tr><td>:⁠id</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span>Media ID (MAL)</span> <!----></td></tr><tr><td>:⁠part</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span>Part number</span> <!----></td></tr> <tr class="params-table--group"><td colspan="3">
+                        Query parameters
+                    </td></tr> <tr><td>?⁠kind</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>Kind of translations to be returned.</span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>One of: <code>sub, dub, scan, off, raw</code></li></ul></div></td></tr><tr><td>?⁠lang</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>Language of translations to be returned.</span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>One of: <code>en, ru, by, ua, jp, fr, de, cn, ko, other</code></li></ul></div></td></tr><tr><td>?⁠hq</td> <td><span><span><!----> <span>
+            boolean
+        </span></span></span></td> <td><span>If true then only HQ translations will be returned</span> <!----></td></tr><tr><td>?⁠raw</td> <td><span><span><!----> <span>
+            boolean
+        </span></span></span></td> <td><span>If passed then items will not be sorted and classified, and returned as a raw array of objects</span> <!----></td></tr><tr><td>?⁠external</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>How to handle translations with external (non-embeddable) players. By default it will just return a link to it. <br/>If <code>?external=page</code>, then will return a special page that will ask user to open it in a new page<br/>If <code>?external=proto</code>, then external players will have a protocol <code>ehttp:// or ehttps://</code>, so you can handle them manually</span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>One of: <code>page, proto</code></li></ul></div></td></tr><tr><td>?⁠needUploader</td> <td><span><span><!----> <span>
+            boolean
+        </span></span></span></td> <td><span>If passed, all translation object will contain a <code>uploader</code> field. However, only <code>id, nickname, avatar</code> fields will be available.</span> <!----></td></tr><tr><td>?⁠fullAuthor</td> <td><span><span><!----> <span>
+            boolean
+        </span></span></span></td> <td><span>If passed, <code>author</code> will contain a <code>TranslationAuthor</code> object (only relevant when <code>?raw</code> is passed)</span> <!----></td></tr> <!----></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> 
+            <a href="/entities/#entity-translation">Translation</a>[]
+        </span><span><span>⁠|​⁠</span> 
+            <a href="/entities/#entity-translationqueryresult">TranslationQueryResult</a>
+        </span></span> <p>List of matching translations. If <code>raw</code> is passed then <code>Translation[]</code> will be returned, otherwise <code>TranslationQueryResult</code></p> <!----> <!----></div></div><div><hr> <div class="endpoint"><h3 id="get-recent-translations"><a href="#get-recent-translations" class="header-anchor">#</a>
+        Get recent translations
+    </h3> <div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/v2/translations/:type/recent</span></div></div> <p class="action-desc">Get translations that were recently added. Has a hard limit of 15 items.</p> <!----> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr class="params-table--group"><td colspan="3">
+                        URL parameters
+                    </td></tr> <tr><td>:⁠type</td> <td><span><span><!----> <span>
+            &quot;anime&quot;
+        </span></span><span><span>⁠|​⁠</span> <span>
+            &quot;manga&quot;
+        </span></span></span></td> <td><span>Media type</span> <!----></td></tr> <tr class="params-table--group"><td colspan="3">
+                        Query parameters
+                    </td></tr> <tr><td>?⁠kind</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>Kind of translations to be returned.</span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>One of: <code>sub, dub, scan, off, raw</code></li></ul></div></td></tr><tr><td>?⁠lang</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>Language of translations to be returned.</span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>One of: <code>en, ru, by, ua, jp, fr, de, cn, ko, other</code></li></ul></div></td></tr><tr><td>?⁠hq</td> <td><span><span><!----> <span>
+            boolean
+        </span></span></span></td> <td><span>If true then only HQ translations will be returned</span> <!----></td></tr><tr><td>?⁠raw</td> <td><span><span><!----> <span>
+            boolean
+        </span></span></span></td> <td><span>If passed then items will not be sorted and classified, and returned as a raw array of objects</span> <!----></td></tr><tr><td>?⁠external</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>How to handle translations with external (non-embeddable) players. By default it will just return a link to it. <br/>If <code>?external=page</code>, then will return a special page that will ask user to open it in a new page<br/>If <code>?external=proto</code>, then external players will have a protocol <code>ehttp:// or ehttps://</code>, so you can handle them manually</span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>One of: <code>page, proto</code></li></ul></div></td></tr><tr><td>?⁠needUploader</td> <td><span><span><!----> <span>
+            boolean
+        </span></span></span></td> <td><span>If passed, all translation object will contain a <code>uploader</code> field. However, only <code>id, nickname, avatar</code> fields will be available.</span> <!----></td></tr><tr><td>?⁠fullAuthor</td> <td><span><span><!----> <span>
+            boolean
+        </span></span></span></td> <td><span>If passed, <code>author</code> will contain a <code>TranslationAuthor</code> object (only relevant when <code>?raw</code> is passed)</span> <!----></td></tr> <!----></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> 
+            <a href="/entities/#entity-translation">Translation</a>[]
+        </span></span> <p>List of recent translations.</p> <!----> <!----></div></div><div><hr> <div class="endpoint"><h3 id="get-translations"><a href="#get-translations" class="header-anchor">#</a>
+        Get translations
+    </h3> <div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/v2/translations</span></div></div> <p class="action-desc">Get translations by ids</p> <!----> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><!----> <tr class="params-table--group"><td colspan="3">
+                        Query parameters
+                    </td></tr> <tr><td>?⁠ids</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span>Comma-separated list of translation ids</span> <!----></td></tr> <!----></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> 
+            <a href="/entities/#entity-translation">Translation</a>[]
+        </span></span> <p>List of requested translations. Note that if some translations do not exist it will silently fail.</p> <!----> <!----></div></div><div><hr> <div class="endpoint"><h3 id="get-available-media-parts"><a href="#get-available-media-parts" class="header-anchor">#</a>
+        Get available media parts
+    </h3> <div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/v2/translations/:type/:id/parts</span></div></div><div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/anime/:id/episodes</span></div></div><div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/anime/v2/:id/episodes</span></div></div><div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/v2/anime/:id/episodes</span></div></div> <p class="action-desc">Returns list of available media parts (ones that have at least one translation).</p> <!----> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr class="params-table--group"><td colspan="3">
+                        URL parameters
+                    </td></tr> <tr><td>:⁠id</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span>Anime ID (MAL)</span> <!----></td></tr> <!----> <!----></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> <span>
+            number
+        </span></span></span> <p>List of available media parts</p> <!----> <!----></div></div><div><hr> <div class="endpoint"><h3 id="query-anime-translations"><a href="#query-anime-translations" class="header-anchor">#</a>
+        Query anime translations
+    </h3> <div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">(/v2)?/anime/(query)?</span></div></div> <p class="action-desc">Query anime translations by parameters. Deprecated in favor of v2 translations API.</p> <!----> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><!----> <tr class="params-table--group"><td colspan="3">
+                        Query parameters
+                    </td></tr> <tr><td>?⁠kind</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>Kind of translations to be returned.</span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>One of: <code>sub, dub, scan, off, raw</code></li></ul></div></td></tr><tr><td>?⁠lang</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>Language of translations to be returned.</span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>One of: <code>en, ru, by, ua, jp, fr, de, cn, ko, other</code></li></ul></div></td></tr><tr><td>?⁠hq</td> <td><span><span><!----> <span>
+            boolean
+        </span></span></span></td> <td><span>If true then only HQ translations will be returned</span> <!----></td></tr><tr><td>?⁠raw</td> <td><span><span><!----> <span>
+            boolean
+        </span></span></span></td> <td><span>If passed then items will not be sorted and classified, and returned as a raw array of objects</span> <!----></td></tr><tr><td>?⁠external</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>How to handle translations with external (non-embeddable) players. By default it will just return a link to it. <br/>If <code>?external=page</code>, then will return a special page that will ask user to open it in a new page<br/>If <code>?external=proto</code>, then external players will have a protocol <code>ehttp:// or ehttps://</code>, so you can handle them manually</span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>One of: <code>page, proto</code></li></ul></div></td></tr><tr><td>?⁠needUploader</td> <td><span><span><!----> <span>
+            boolean
+        </span></span></span></td> <td><span>If passed, all translation object will contain a <code>uploader</code> field. However, only <code>id, nickname, avatar</code> fields will be available.</span> <!----></td></tr><tr><td>?⁠fullAuthor</td> <td><span><span><!----> <span>
+            boolean
+        </span></span></span></td> <td><span>If passed, <code>author</code> will contain a <code>TranslationAuthor</code> object (only relevant when <code>?raw</code> is passed)</span> <!----></td></tr><tr><td>?⁠formatted</td> <td><span><span><!----> <span>
+            presence
+        </span></span></span></td> <td><span>Opposite of <code>raw</code></span> <!----></td></tr><tr><td>?⁠anime</td> <td><span><span><!----> <span>
+            string
+        </span></span><span><span>⁠|​⁠</span> <span>
+            string
+        </span></span></span></td> <td><span>Anime id or ids (comma-separated)</span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>Maximum length: 10</li></ul></div></td></tr><tr><td>?⁠target</td> <td><span><span><!----> <span>
+            string
+        </span></span><span><span>⁠|​⁠</span> <span>
+            string
+        </span></span></span></td> <td><span>Same as <code>anime</code></span> <!----></td></tr> <!----></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> 
+            <a href="/entities/#entity-translation">Translation</a>[]
+        </span><span><span>⁠|​⁠</span> 
+            <a href="/entities/#entity-translationqueryresult">TranslationQueryResult</a>
+        </span></span> <p>List of matching translations. If <code>formatted</code> is passed then <code>TranslationQueryResult</code> will be returned, otherwise <code>Translation[]</code></p> <!----> <!----></div></div><div><hr> <div class="endpoint"><h3 id="get-anime-translations-by-anime-id"><a href="#get-anime-translations-by-anime-id" class="header-anchor">#</a>
+        Get anime translations by anime ID
+    </h3> <div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/anime/v2/:id</span></div></div><div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/v2/anime/:id</span></div></div> <p class="action-desc">Get anime translations by anime ID. Deprecated in favor of v2 translations API.</p> <!----> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr class="params-table--group"><td colspan="3">
+                        URL parameters
+                    </td></tr> <tr><td>:⁠id</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span>Anime ID (MAL)</span> <!----></td></tr> <tr class="params-table--group"><td colspan="3">
+                        Query parameters
+                    </td></tr> <tr><td>?⁠kind</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>Kind of translations to be returned.</span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>One of: <code>sub, dub, scan, off, raw</code></li></ul></div></td></tr><tr><td>?⁠lang</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>Language of translations to be returned.</span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>One of: <code>en, ru, by, ua, jp, fr, de, cn, ko, other</code></li></ul></div></td></tr><tr><td>?⁠hq</td> <td><span><span><!----> <span>
+            boolean
+        </span></span></span></td> <td><span>If true then only HQ translations will be returned</span> <!----></td></tr><tr><td>?⁠raw</td> <td><span><span><!----> <span>
+            boolean
+        </span></span></span></td> <td><span>If passed then items will not be sorted and classified, and returned as a raw array of objects</span> <!----></td></tr><tr><td>?⁠external</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>How to handle translations with external (non-embeddable) players. By default it will just return a link to it. <br/>If <code>?external=page</code>, then will return a special page that will ask user to open it in a new page<br/>If <code>?external=proto</code>, then external players will have a protocol <code>ehttp:// or ehttps://</code>, so you can handle them manually</span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>One of: <code>page, proto</code></li></ul></div></td></tr><tr><td>?⁠needUploader</td> <td><span><span><!----> <span>
+            boolean
+        </span></span></span></td> <td><span>If passed, all translation object will contain a <code>uploader</code> field. However, only <code>id, nickname, avatar</code> fields will be available.</span> <!----></td></tr><tr><td>?⁠fullAuthor</td> <td><span><span><!----> <span>
+            boolean
+        </span></span></span></td> <td><span>If passed, <code>author</code> will contain a <code>TranslationAuthor</code> object (only relevant when <code>?raw</code> is passed)</span> <!----></td></tr> <!----></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> 
+            <a href="/entities/#entity-translation">Translation</a>[]
+        </span><span><span>⁠|​⁠</span> 
+            <a href="/entities/#entity-translationqueryresult">TranslationQueryResult</a>
+        </span></span> <p>List of matching translations. If <code>raw</code> is passed then <code>Translation[]</code> will be returned, otherwise <code>TranslationQueryResult</code></p> <!----> <!----></div></div><div><hr> <div class="endpoint"><h3 id="get-anime-translations-by-anime-id-and-episode"><a href="#get-anime-translations-by-anime-id-and-episode" class="header-anchor">#</a>
+        Get anime translations by anime ID and episode
+    </h3> <div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/anime/v2/:id/episode(s)?/:episode</span></div></div><div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/v2/anime/:id/episode(s)?/:episode</span></div></div> <p class="action-desc">Get anime translations by anime ID and episode number. Deprecated in favor of v2 translations API.</p> <!----> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr class="params-table--group"><td colspan="3">
+                        URL parameters
+                    </td></tr> <tr><td>:⁠id</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span>Anime ID (MAL)</span> <!----></td></tr><tr><td>:⁠episode</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span>Episode number (starts from 1)</span> <!----></td></tr> <tr class="params-table--group"><td colspan="3">
+                        Query parameters
+                    </td></tr> <tr><td>?⁠kind</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>Kind of translations to be returned.</span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>One of: <code>sub, dub, scan, off, raw</code></li></ul></div></td></tr><tr><td>?⁠lang</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>Language of translations to be returned.</span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>One of: <code>en, ru, by, ua, jp, fr, de, cn, ko, other</code></li></ul></div></td></tr><tr><td>?⁠hq</td> <td><span><span><!----> <span>
+            boolean
+        </span></span></span></td> <td><span>If true then only HQ translations will be returned</span> <!----></td></tr><tr><td>?⁠raw</td> <td><span><span><!----> <span>
+            boolean
+        </span></span></span></td> <td><span>If passed then items will not be sorted and classified, and returned as a raw array of objects</span> <!----></td></tr><tr><td>?⁠external</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>How to handle translations with external (non-embeddable) players. By default it will just return a link to it. <br/>If <code>?external=page</code>, then will return a special page that will ask user to open it in a new page<br/>If <code>?external=proto</code>, then external players will have a protocol <code>ehttp:// or ehttps://</code>, so you can handle them manually</span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>One of: <code>page, proto</code></li></ul></div></td></tr><tr><td>?⁠needUploader</td> <td><span><span><!----> <span>
+            boolean
+        </span></span></span></td> <td><span>If passed, all translation object will contain a <code>uploader</code> field. However, only <code>id, nickname, avatar</code> fields will be available.</span> <!----></td></tr><tr><td>?⁠fullAuthor</td> <td><span><span><!----> <span>
+            boolean
+        </span></span></span></td> <td><span>If passed, <code>author</code> will contain a <code>TranslationAuthor</code> object (only relevant when <code>?raw</code> is passed)</span> <!----></td></tr> <!----></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> 
+            <a href="/entities/#entity-translation">Translation</a>[]
+        </span><span><span>⁠|​⁠</span> 
+            <a href="/entities/#entity-translationqueryresult">TranslationQueryResult</a>
+        </span></span> <p>List of matching translations. If <code>raw</code> is passed then <code>Translation[]</code> will be returned, otherwise <code>TranslationQueryResult</code></p> <!----> <!----></div></div><div><hr> <div class="endpoint"><h3 id="get-translation"><a href="#get-translation" class="header-anchor">#</a>
+        Get translation
+    </h3> <div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/translations/:id</span></div></div><div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/translation/:id</span></div></div><div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/v2/translations/:id</span></div></div><div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/v2/translation/:id</span></div></div> <p class="action-desc">Get a single translation</p> <!----> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr class="params-table--group"><td colspan="3">
+                        URL parameters
+                    </td></tr> <tr><td>:⁠id</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span>Translation ID</span> <!----></td></tr> <tr class="params-table--group"><td colspan="3">
+                        Query parameters
+                    </td></tr> <tr><td>?⁠needUploader</td> <td><span><span><!----> <span>
+            presence
+        </span></span></span></td> <td><span>If present, uploader object will be added to result.</span> <!----></td></tr> <!----></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> 
+            <a href="/entities/#entity-translation">Translation</a>
+        </span><span><span>⁠|​⁠</span> <span>
+            null
+        </span></span></span> <p>Requested translation or null if it does not exist</p> <!----> <!----></div></div></div><div class="endpoint"><h2 id="users"><a href="#users" class="header-anchor">#</a>
+        Users
+    </h2> <!----> <p class="group-desc">User related endpoints</p> <h4>Special features:</h4> <ul class="features"><li>Alias at <code>:id</code> — <code>@me</code> → <code>%current user id%</code></li></ul> <!----> <!----> <h4>Throws</h4> <table><thead><tr><td><div style="min-width:160px">Error</div></td> <td>Description</td></tr></thead> <tbody><tr><td><code>UNKNOWN_USER</code></td> <td>Trying to use @me alias without authorization</td></tr></tbody></table> <div><!----> <div class="endpoint"><h3 id="get-user"><a href="#get-user" class="header-anchor">#</a>
+        Get user
+    </h3> <div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/v2/users/:id</span></div></div> <p class="action-desc">Get one user by ID</p> <!----> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr class="params-table--group"><td colspan="3">
+                        URL parameters
+                    </td></tr> <tr><td>:⁠id</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span>User ID</span> <!----></td></tr> <tr class="params-table--group"><td colspan="3">
+                        Query parameters
+                    </td></tr> <tr><td>?⁠withStat</td> <td><span><span><!----> <span>
+            boolean
+        </span></span></span></td> <td><span>If present, user will have additional <code>added</code> field, containing number of added translations by that user</span> <!----></td></tr> <!----></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> 
+            <a href="/entities/#entity-user">User</a>
+        </span><span><span>⁠|​⁠</span> <span>
+            null
+        </span></span></span> <p>Requested user if exists, null otherwise. Note that <code>sub</code>, <code>service</code> and <code>language</code> fields will only be available for current user</p> <!----> <!----></div></div><div><hr> <div class="endpoint"><h3 id="patch-a-user"><a href="#patch-a-user" class="header-anchor">#</a>
+        Patch a user
+    </h3> <div class="method-container method-PATCH"><span class="method method-PATCH">PATCH</span> <div class="path-container"><span class="path">/v2/users/:id</span></div></div> <p class="action-desc">Change user information.</p> <h4>Special features:</h4> <ul class="features"><li>Requires auth</li></ul> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><!----> <!----> <tr class="params-table--group"><td colspan="3">
+                    Body is
+                    <span class="type-display--mono"><span><!----> 
+            <a href="/entities/#entity-patchuserbody">PatchUserBody</a>
+        </span></span></td></tr></tbody></table> <!----> <h4>Throws</h4> <table><thead><tr><td><div style="min-width:160px">Error</div></td> <td>Description</td></tr></thead> <tbody><tr><td><code>NO_AUTH</code></td> <td>Not logged in</td></tr><tr><td><code>ACCESS_DENIED</code></td> <td>You can not edit one of fields that were passed in body.</td></tr><tr><td><code>NO_EDIT</code></td> <td>Body does not contain any fields</td></tr><tr><td><code>NOT_FOUND</code></td> <td>Target user was not found</td></tr><tr><td><code>NOT_CONNECTED</code></td> <td>You are trying to change service, but user does not have connected account there.</td></tr></tbody></table> <!----></div></div><div><hr> <div class="endpoint"><h3 id="control-user-language"><a href="#control-user-language" class="header-anchor">#</a>
+        Control user language
+    </h3> <div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/v2/users/:id/lang</span></div></div> <p class="action-desc">Get or set user language, which will be used in server-side i18n.</p> <h4>Special features:</h4> <ul class="features"><li>Only available for currently logged in user</li><li>Requires auth</li></ul> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr class="params-table--group"><td colspan="3">
+                        URL parameters
+                    </td></tr> <tr><td>:⁠new</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>Optional. New language to set to user</span> <!----></td></tr> <!----> <!----></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> <span>
+            string
+        </span></span></span> <p>User language</p> <h4>Throws</h4> <table><thead><tr><td><div style="min-width:160px">Error</div></td> <td>Description</td></tr></thead> <tbody><tr><td><code>ACCESS_DENIED</code></td> <td>Trying to access other user's API</td></tr><tr><td><code>NO_AUTH</code></td> <td>Not logged in</td></tr><tr><td><code>INVALID_LANG</code></td> <td>Given language is unknown. Currently supported locales can be found in <b>Starting Point</b></td></tr></tbody></table> <!----></div></div><div><hr> <div class="endpoint"><h3 id="disconnect-user-service"><a href="#disconnect-user-service" class="header-anchor">#</a>
+        Disconnect user service
+    </h3> <div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/v2/users/:id/disconnect</span></div></div> <p class="action-desc">Removes connection to a given service for a user. User must have at least one active connection though.</p> <h4>Special features:</h4> <ul class="features"><li>Only available for currently logged in user</li><li>Requires auth</li></ul> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr class="params-table--group"><td colspan="3">
+                        URL parameters
+                    </td></tr> <tr><td>:⁠service</td> <td><span><span><!----> 
+            <a href="/entities/#entity-connectableservice">ConnectableService</a>
+        </span></span></td> <td><span>Service to disconnect</span> <!----></td></tr> <!----> <!----></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> 
+            <a href="/entities/#entity-user">User</a>
+        </span></span> <p>User</p> <h4>Throws</h4> <table><thead><tr><td><div style="min-width:160px">Error</div></td> <td>Description</td></tr></thead> <tbody><tr><td><code>ACCESS_DENIED</code></td> <td>Trying to access other user's API</td></tr><tr><td><code>NO_AUTH</code></td> <td>Not logged in</td></tr><tr><td><code>LAST_SERVICE</code></td> <td>You are trying to disconnect last connected service, which is not possible</td></tr><tr><td><code>NOT_CONNECTED</code></td> <td>You are trying to disconnect a service, which user has no connection to</td></tr></tbody></table> <!----></div></div><div><hr> <div class="endpoint"><h3 id="get-user-by-parameters"><a href="#get-user-by-parameters" class="header-anchor">#</a>
+        Get user by parameters
+    </h3> <div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/v2/users/</span></div></div> <p class="action-desc">Get one user by ID on external service or nickname</p> <!----> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><!----> <tr class="params-table--group"><td colspan="3">
+                        Query parameters
+                    </td></tr> <tr><td>?⁠shikiId</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span>User's connected Shikimori ID</span> <!----></td></tr><tr><td>?⁠nickname</td> <td><span><span><!----> <span>
+            string
+        </span></span></span></td> <td><span>User's nickname</span> <!----></td></tr><tr><td>?⁠withStat</td> <td><span><span><!----> <span>
+            boolean
+        </span></span></span></td> <td><span>If present, user will have additional <code>added</code> field, containing number of added translations by that user</span> <!----></td></tr> <!----></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> 
+            <a href="/entities/#entity-user">User</a>
+        </span><span><span>⁠|​⁠</span> <span>
+            null
+        </span></span></span> <!----> <!----> <!----></div></div></div><div class="endpoint"><h2 id="user-rates"><a href="#user-rates" class="header-anchor">#</a>
+        User rates
+    </h2> <!----> <p class="group-desc">User rates (aka user lists) related endpoints. Note that we do not store any user rates. Instead, we proxy them to selected user's provider and normalize into universal UserRate object.</p> <h4>Special features:</h4> <ul class="features"><li>Requires auth</li></ul> <!----> <!----> <h4>Throws</h4> <table><thead><tr><td><div style="min-width:160px">Error</div></td> <td>Description</td></tr></thead> <tbody><tr><td><code>NO_AUTH</code></td> <td>Not logged in</td></tr></tbody></table> <div><!----> <div class="endpoint"><h3 id="get-user-rates"><a href="#get-user-rates" class="header-anchor">#</a>
+        Get user rates
+    </h3> <div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/v2/user_rates/</span></div></div> <p class="action-desc">Get user rates by parameters. Overall logic is common, but results may vary between providers</p> <!----> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><!----> <tr class="params-table--group"><td colspan="3">
+                        Query parameters
+                    </td></tr> <tr><td>?⁠user_id</td> <td><span><span><!----> <span>
+            number
+        </span></span><span><span>⁠|​⁠</span> <span>
+            string
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>Numeric integer </li></ul></div></td></tr><tr><td>?⁠target_id</td> <td><span><span><!----> <span>
+            number
+        </span></span><span><span>⁠|​⁠</span> <span>
+            string
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>Numeric integer </li></ul></div></td></tr><tr><td>?⁠target_type</td> <td><span><span><!----> <span>
+            object
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>One of: <code>anime, manga</code></li></ul></div></td></tr><tr><td>?⁠status</td> <td><span><span><!----> <span>
+            object
+        </span></span></span></td> <td><span></span> <div><span class="checks-title">
+        Checks:
+    </span> <ul class="checks"><li>One of: <code>planned, in_progress, completed, on_hold, dropped</code></li></ul></div></td></tr> <!----></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> 
+            <a href="/entities/#entity-userrate">UserRate</a>[]
+        </span></span> <!----> <!----> <!----></div></div><div><hr> <div class="endpoint"><h3 id="get-single-user-rate"><a href="#get-single-user-rate" class="header-anchor">#</a>
+        Get single user rate
+    </h3> <div class="method-container method-GET"><span class="method method-GET">GET</span> <div class="path-container"><span class="path">/v2/user_rates/:rateId</span></div></div> <p class="action-desc">Get user rate by ID. ID format may vary between providers</p> <!----> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr class="params-table--group"><td colspan="3">
+                        URL parameters
+                    </td></tr> <tr><td>:⁠rateId</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span>User rate ID</span> <!----></td></tr> <!----> <!----></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> 
+            <a href="/entities/#entity-userrate">UserRate</a>
+        </span></span> <!----> <!----> <!----></div></div><div><hr> <div class="endpoint"><h3 id="create-a-user-rate"><a href="#create-a-user-rate" class="header-anchor">#</a>
+        Create a user rate
+    </h3> <div class="method-container method-POST"><span class="method method-POST">POST</span> <div class="path-container"><span class="path">/v2/user_rates/</span></div></div> <p class="action-desc">Create user rate by common params.</p> <!----> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><!----> <!----> <tr class="params-table--group"><td colspan="3">
+                    Body is
+                    <span class="type-display--mono"><span><!----> 
+            <a href="/entities/#entity-userrate">UserRate</a>
+        </span></span></td></tr></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> 
+            <a href="/entities/#entity-userrate">UserRate</a>
+        </span></span> <!----> <!----> <!----></div></div><div><hr> <div class="endpoint"><h3 id="update-a-user-rate"><a href="#update-a-user-rate" class="header-anchor">#</a>
+        Update a user rate
+    </h3> <div class="method-container method-POST"><span class="method method-POST">POST</span> <div class="path-container"><span class="path">/v2/user_rates/:rateId</span></div></div> <p class="action-desc">Update user rate.</p> <!----> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr class="params-table--group"><td colspan="3">
+                        URL parameters
+                    </td></tr> <tr><td>:⁠rateId</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span>User rate ID</span> <!----></td></tr> <!----> <tr class="params-table--group"><td colspan="3">
+                    Body is
+                    <span class="type-display--mono"><span><!----> 
+            <a href="/entities/#entity-userrate">UserRate</a>
+        </span></span></td></tr></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> 
+            <a href="/entities/#entity-userrate">UserRate</a>
+        </span></span> <!----> <!----> <!----></div></div><div><hr> <div class="endpoint"><h3 id="delete-a-user-rate"><a href="#delete-a-user-rate" class="header-anchor">#</a>
+        Delete a user rate
+    </h3> <div class="method-container method-DELETE"><span class="method method-DELETE">DELETE</span> <div class="path-container"><span class="path">/v2/user_rates/:rateId</span></div></div> <p class="action-desc">Delete a single user rate. Actual action may vary between providers.</p> <!----> <h4>Parameters</h4> <table class="params-table"><thead><tr><td>Name</td> <td>Type</td> <td>Description</td></tr></thead> <tbody><tr class="params-table--group"><td colspan="3">
+                        URL parameters
+                    </td></tr> <tr><td>:⁠rateId</td> <td><span><span><!----> <span>
+            number
+        </span></span></span></td> <td><span>User rate ID</span> <!----></td></tr> <!----> <!----></tbody></table> <h4>Returns</h4> <span class="type-display--mono"><span><!----> <span>
+            &quot;OK&quot;
+        </span></span></span> <!----> <!----> <!----></div></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">5/28/2020, 8:53:31 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/" class="prev router-link-active">
+        Starting point
+      </a></span> <span class="next"><a href="/entities/">
+        Entities
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.ca4d2e0d.js" defer></script><script src="/assets/js/2.0e07b844.js" defer></script><script src="/assets/js/10.7340fc84.js" defer></script><script src="/assets/js/3.8a841bdf.js" defer></script>
+  </body>
+</html>
